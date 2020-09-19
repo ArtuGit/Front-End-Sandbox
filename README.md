@@ -1,1 +1,1 @@
-# Front-End-Practices
+# Front-End Practices
