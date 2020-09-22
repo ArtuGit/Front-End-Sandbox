@@ -156,7 +156,7 @@ h1 {
 
 .product {
   margin: 15px;
-  padding: 15px;
+  padding: 15px 15px 5px 15px;
   background-color: #999999;
   border: 1px solid black;
   position:relative;
@@ -179,7 +179,6 @@ div.title {
 
 div.description {
   padding-top: 15px;
-  display: inline-block;
 }
 
 #first {
