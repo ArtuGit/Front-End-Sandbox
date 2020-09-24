@@ -68,14 +68,46 @@ for (let numLoop = 3; numLoop >= 1; numLoop--) {
 }
 
 // Will be specified
-echo('Functions', 'echo')
-echo('A function as a var', 'funcDeclare,funcResult')
+echo('Function Declaration', 'echo')
+
+echo('Function Expression', 'funcDeclare,funcResult')
 const funcDeclare = function (param) {
   const result = 'func:' + param
-  console.log(result)
   return result
 }
 console.log(typeof(funcDeclare)) //function
 const funcResult = funcDeclare('1') //function
 console.log(typeof(funcResult)) //function
 console.log(funcResult) //func:1
+
+echo('Function as var', 'funcDeclare1,funcResult1')
+function funcDeclare1(param) {
+  const result = 'func:' + param
+  return result
+}
+console.log(typeof(funcDeclare1)) //function
+const funcResult1 = funcDeclare1('2') //function
+console.log(typeof(funcResult1)) //function
+console.log(funcResult1) //func:2
+
+echo ('Arrow functions','sumArrow')
+let sumArrow = (a, b) => a + b; // 2 parameters
+/* This arrow function is a shorter form of:
+let sum = function(a, b) {
+  return a + b;
+};
+*/
+console.log(sumArrow(1, 2) ); // 3
+
+let doubleArrow = n => n * 2; // 1 parameter
+// roughly the same as: let double = function(n) { return n * 2 }
+console.log(doubleArrow(3) ); // 6
+
+let sayHiArrow = () => console.log("Hi!"); // no parameter
+sayHiArrow();
+
+let sumArrow1 = (a, b) => {  // the curly brace opens a multiline function
+  let result = a + b;
+  return result; // if we use curly braces, then we need an explicit "return"
+};
+console.log(sumArrow1(2, 3) ); // 5
