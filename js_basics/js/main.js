@@ -103,7 +103,7 @@ console.log(typeof(funcResult1)) //function
 console.log(funcResult1) //func:2
 
 /* --- */
-echo ('Arrow functions','sumArrow,doubleArrow, sayHiArrow, sumArrow1')
+echo ('Arrow functions','sumArrow, doubleArrow, sayHiArrow, sumArrow1')
 let sumArrow = (a, b) => a + b; // 2 parameters
 /* This arrow function is a shorter form of:
 let sum = function(a, b) {
