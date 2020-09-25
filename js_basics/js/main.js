@@ -13,7 +13,7 @@ function echo(name, keywords) {
 
 function checkGlobal() {
   console.log(varGlobal);
-  let varLocal = 'varLocal'
+  let varLocal = 'varLocal' //redundant, needed to demonstrate
   return varLocal
 }
 
@@ -83,8 +83,7 @@ echo('Function Declaration', 'echo')
 /* --- */
 echo('Function Expression', 'funcDeclare,funcResult')
 const funcDeclare = function (param) {
-  const result = 'func:' + param
-  return result
+  return 'func:' + param
 }
 console.log(typeof(funcDeclare)) //function
 const funcResult = funcDeclare('1') //function
@@ -94,8 +93,7 @@ console.log(funcResult) //func:1
 /* --- */
 echo('Function as var', 'funcDeclare1,funcResult1')
 function funcDeclare1(param) {
-  const result = 'func:' + param
-  return result
+  return 'func:' + param
 }
 console.log(typeof(funcDeclare1)) //function
 const funcResult1 = funcDeclare1('2') //function
@@ -120,7 +118,31 @@ let sayHiArrow = () => console.log("Hi!"); // no parameter
 sayHiArrow();
 
 let sumArrow1 = (a, b) => {  // the curly brace opens a multiline function
-  let result = a + b;
-  return result; // if we use curly braces, then we need an explicit "return"
+  return a + b;
 };
 console.log(sumArrow1(2, 3) ); // 5
+
+/* --- */
+echo('Higher Order Functions') //A function as an argument of another function
+setTimeout(() => console.log('Hi from "Higher Order Functions" section'), 500)
+
+/* --- */
+echo('Arrays')
+let friends  = ['Emma','Liam','Olivia', 'Noah', 'Ava', 'William']
+console.log(friends.length)
+friends.push('Isabella');
+friends.push('Wrong');
+friends.pop();
+console.log(friends)
+console.log(friends.indexOf("Noah"))
+couple = friends.slice(1,3)
+console.log(couple)
+
+// Array Iteration
+const friends3 = friends.slice(0,3)
+console.log(friends3)
+
+for (let i = 0; i < friends3.length; i++) { //Method 1. 'while is possible too
+  console.log(friends3[i])
+}
+friends3.forEach( (item) => console.log(item) )
