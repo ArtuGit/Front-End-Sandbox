@@ -127,7 +127,7 @@ echo('Higher Order Functions') //A function as an argument of another function
 setTimeout(() => console.log('Hi from "Higher Order Functions" section'), 500)
 
 /* --- */
-echo('Arrays')
+echo('Arrays','friends, couple, friends3')
 let friends  = ['Emma','Liam','Olivia', 'Noah', 'Ava', 'William']
 console.log(friends.length)
 friends.push('Isabella');
@@ -146,3 +146,18 @@ for (let i = 0; i < friends3.length; i++) { //Method 1. 'while is possible too
   console.log(friends3[i])
 }
 friends3.forEach( (item) => console.log(item) )
+
+/* --- */
+echo('Objects',"dog")
+let dog = {
+  name: 'Rena',
+  gender: 'bitch',
+  age: 4,
+  toBark() {
+    console.log("Bow Wow! I am " + this.name + "!");
+  }
+}
+dog.alive = true;
+dog.age = 5;
+console.log(dog)
+dog.toBark();
