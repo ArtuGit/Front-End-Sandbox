@@ -1,12 +1,30 @@
 body {
-    background-color: #0080ff;
+  background-color: #0080ff;
 }
 
 h1 {
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+  font-size: medium;
 }
 
 .keyword {
-color: whitesmoke;
+  color: whitesmoke;
+}
+
+.ul-decimal {
+  list-style-type: decimal;
+}
+
+.ul-circle {
+  list-style-type: circle;
+}
+.li-regular {
+  color: #C14543;
+}
+
+#the-second {
+  color: maroon;
 }

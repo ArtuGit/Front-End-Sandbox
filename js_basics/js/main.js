@@ -161,3 +161,20 @@ dog.alive = true;
 dog.age = 5;
 console.log(dog)
 dog.toBark();
+
+/* --- */
+echo('DOM');
+const h1 = document.querySelector('h1');
+console.log(h1)
+console.log(typeof(h1)) //object
+
+console.log(document.getElementById('the-second'))
+console.log(document.querySelector('#the-second')) // the same as previous
+
+console.log(document.getElementsByClassName('li-regular'))
+console.log(document.querySelector('.li-regular')) // first one from previous previous
+
+console.log(document.getElementsByTagName('h2'))
+console.log(document.querySelector('h2')) // first one from previous previous
+console.log(document.querySelectorAll('h2')) // all
+
