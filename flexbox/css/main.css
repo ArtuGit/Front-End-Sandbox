@@ -1,11 +1,29 @@
-body {
+
+* {
   box-sizing: border-box;
+}
+
+html, body {
+  /* IE 10-11 didn't like using min-height */
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font: 16px Sans-Serif;
+  display: flex;
+  flex-direction: column;
   background-color: #e9c46a;
 }
 
 h1 {
   text-align: center;
   color: #e76f51;
+  margin: 0 0 20px 0;
+}
+
+p {
+  margin: 0 0 20px 0;
 }
 
 .navigation {
@@ -27,6 +45,11 @@ h1 {
 
 .navigation a:hover {
   background: #e76f51;
+}
+
+.content {
+  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px;
 }
 
 .container {
@@ -51,7 +74,17 @@ h1 {
   box-shadow: 5px 5px 3px -2px #264653;
 }
 
+footer {
+  background: #264653;
+  color: white;
+  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px;
+}
+
 div.item > span {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 15px;
   font-weight: bold;
   color: whitesmoke;
 }
@@ -59,7 +92,11 @@ div.item > span {
 #tall {
 }
 
-@media all and (max-width: 800px) {
+#add {
+  margin-top: 30px;
+}
+
+@media all and (max-width: 900px) {
   .navigation {
     justify-content: space-around;
   }
@@ -88,6 +125,7 @@ div.item > span {
     flex-flow: column wrap;
   }
   .item {
-    width: 80%;
+    width: 90%;
   }
 }
+
