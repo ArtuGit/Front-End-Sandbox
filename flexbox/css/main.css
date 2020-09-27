@@ -33,6 +33,7 @@ p {
   list-style: none;
   margin: 0;
   background: #264653;
+  padding: 0 20px 0 20px;
 }
 
 .navigation a {
@@ -74,11 +75,44 @@ p {
   box-shadow: 5px 5px 3px -2px #264653;
 }
 
+.item-footer {
+  min-height: 30px;
+}
+
+div.item-footer p {
+  text-align: center;
+}
+
+ul.navigation2 {
+  list-style-type: none;
+}
+
+.navigation2 a {
+  line-height: 15px;
+}
+
+.navigation2 a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.navigation2 a:hover {
+  text-decoration: underline;
+}
+
+.navigation2 li {
+  line-height: 1.3em;
+}
+
 footer {
   background: #264653;
   color: white;
   flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
   padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 div.item > span {
@@ -100,9 +134,11 @@ div.item > span {
   .navigation {
     justify-content: space-around;
   }
+
   .item {
     width: 45%;
   }
+
 }
 
 @media all and (max-width: 600px) {
@@ -110,13 +146,15 @@ div.item > span {
     flex-flow: column wrap;
     padding: 0;
   }
+
   .navigation a {
     text-align: center;
     font-size: 1.2em;
     padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255,0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
+
   .navigation li:last-of-type a {
     border-bottom: none;
   }
@@ -124,8 +162,10 @@ div.item > span {
   .container {
     flex-flow: column wrap;
   }
+
   .item {
     width: 90%;
   }
+
 }
 
