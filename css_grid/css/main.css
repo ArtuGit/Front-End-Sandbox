@@ -23,6 +23,27 @@ p {
   margin: 0 0 20px 0;
 }
 
+header {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  border: 1px solid black;
+  background: #2a9d8f;
+}
+
+.navigation {
+  grid-column-start: 2;
+  display: grid;
+  grid-template-columns: repeat(10,1fr); /* 5 menu items amount, ToDo: to set dynamically */
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: black;
+  font-size: 1.3em;
+}
+
 .content {
   padding: 20px;
   margin: 2rem;
@@ -41,8 +62,6 @@ p {
 }
 
 .footer {
-  grid-row-start: 2;
-  grid-row-end: 3;
   background: #42A5F5;
   color: white;
   padding: 20px;
@@ -56,6 +75,7 @@ p {
 }
 
 @media all and (max-width: 900px) {
+
   .container {
     grid-template-columns: 1fr 1fr;
   }
