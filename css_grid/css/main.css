@@ -23,25 +23,27 @@ p {
   margin: 0 0 20px 0;
 }
 
-header {
-  display: grid;
-  grid-template-columns: 10% 90%;
-  border: 1px solid black;
-  background: #2a9d8f;
-}
 
 .navigation {
-  grid-column-start: 2;
-  display: grid;
-  grid-template-columns: repeat(10,1fr); /* 5 menu items amount, ToDo: to set dynamically */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  background: #264653;
+  padding: 0 20px 0 20px;
 }
 
 .navigation a {
   text-decoration: none;
   display: block;
   padding: 1em;
-  color: black;
+  color: whitesmoke;
   font-size: 1.3em;
+}
+
+.navigation a:hover {
+  background: #e76f51;
 }
 
 .content {
@@ -59,6 +61,49 @@ header {
   background: #EDE7F6;
   padding: 1.5rem;
   border-radius: 1rem;
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.container2 > div {
+  background: #D59898;
+  border: 1px solid seagreen;
+  height: 100px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: auto 25%;
+  grid-gap: 1em;
+}
+
+.layout > div {
+  background: #E5D198;
+  border: 1px solid;
+}
+
+.layout-header {
+  grid-column: 1 / span 2;
+  grid-row: 1/ span 1;
+  height: 70px;
+}
+
+.layout-main {
+  height: 50vh;
+}
+
+.layout-footer {
+  grid-column: 1 / span 2;
+  height: 70px;
+}
+
+.layout-header, .layout-main, .layout-sidebar, .layout-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer {
@@ -80,6 +125,15 @@ header {
     grid-template-columns: 1fr 1fr;
   }
 
+  .container2 {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .container2 > div {
+    height: 80px;
+  }
+
   .footer {
     grid-template-columns: 1fr 1fr;
   }
@@ -89,6 +143,24 @@ header {
 @media all and (max-width: 600px) {
   .container {
     grid-template-columns: 1fr;
+  }
+
+  .container2 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .container2 > div {
+    height: 60px;
+  }
+
+  .layout-main {
+    grid-column: 1 / span 2;
+  }
+
+  .layout-sidebar {
+    grid-column: 1 / span 2;
+    height: 30vh;
   }
 
   .footer {

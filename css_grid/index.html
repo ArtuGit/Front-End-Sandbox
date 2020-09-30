@@ -1,31 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
   <meta charset="UTF-8">
   <title>CSS Grid</title>
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-<header>
-<ul class="navigation">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">About</a></li>
-  <li><a href="#">Products</a></li>
-  <li><a href="#">Services</a>
-  <li><a href="#">Contact</a></li>
-
-</ul>
-
-
-</header>
-
+<nav>
+  <ul class="navigation">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Products</a></li>
+    <li><a href="#">Services</a>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
 
 <div class="content">
   <h1>CSS Grid Demo</h1>
   <p>This responsive page is built on CSS Grid without any media queries.</p>
+
+  <h2>Some Blocks</h2>
   <div class="container">
     <div class="item">
       <span>One</span>
@@ -72,9 +69,63 @@
     </div>
 
   </div>
-  <p>
-    <button id="add">Add Content</button>
-  </p>
+
+  <h2>Some Grid</h2>
+  <div class="container2">
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+    <div class="item2"></div>
+  </div>
+
+  <h2>Some Layout</h2>
+  <div class="layout">
+    <div class="layout-header">
+      Header
+    </div>
+    <div class="layout-main">
+      Main
+    </div>
+    <div class="layout-sidebar">
+      Sidebar
+    </div>
+    <div class="layout-footer">
+      Footer
+    </div>
+  </div>
+
 </div>
 
 <footer class="footer">
@@ -91,18 +142,12 @@
   </div>
   <div class="item-footer">
     <span> © Copyright </span>
-    <script type="text/javascript">
+    <script>
       document.write(new Date().getFullYear());
     </script>
     <span>. All rights reserved.</span>
   </div>
 </footer>
-
-<script>
-  $("#add").on("click", function () {
-    $("<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>").appendTo(".content");
-  });
-</script>
 
 </body>
 </html>
