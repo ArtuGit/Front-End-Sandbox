@@ -11,12 +11,16 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
   margin: 0;
-  font: 16px Sans-Serif;
-}
+  font: 1em system-ui;
 
+}
 
 h1 {
   margin: 0 0 20px 0;
+}
+
+h1, h2 {
+  color: #d62828;
 }
 
 p {
@@ -43,12 +47,12 @@ p {
 }
 
 .navigation a:hover {
-  background: #e76f51;
+  background: #f77f00;
 }
 
 .content {
-  padding: 20px;
-  margin: 2rem;
+  padding: 10px 20px 20px 20px;
+  margin: 1.5rem 2rem 2rem 2rem;
 }
 
 .container {
@@ -58,9 +62,16 @@ p {
 }
 
 .container > div {
-  background: #EDE7F6;
+  background: #eae2b7;
   padding: 1.5rem;
   border-radius: 1rem;
+}
+
+div.item > span {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #003049;
 }
 
 .container2 {
@@ -69,8 +80,8 @@ p {
 }
 
 .container2 > div {
-  background: #D59898;
-  border: 1px solid seagreen;
+  background: #fcbf49;
+  border: 1px solid #003049;
   height: 100px;
 }
 
@@ -81,8 +92,12 @@ p {
 }
 
 .layout > div {
-  background: #E5D198;
+  background: #f77f00;
   border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
 .layout-header {
@@ -101,14 +116,33 @@ p {
 }
 
 .layout-header, .layout-main, .layout-sidebar, .layout-footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+}
+
+ul.navigation2 {
+  list-style-type: none;
+}
+
+.navigation2 a {
+  line-height: 15px;
+}
+
+.navigation2 a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.navigation2 a:hover {
+  text-decoration: underline;
+}
+
+.navigation2 li {
+  line-height: 1.3em;
 }
 
 .footer {
-  background: #42A5F5;
-  color: white;
+  background: #003049;
+  color: whitesmoke;
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -120,6 +154,9 @@ p {
 }
 
 @media all and (max-width: 900px) {
+  .navigation {
+    justify-content: space-around;
+  }
 
   .container {
     grid-template-columns: 1fr 1fr;
@@ -134,6 +171,15 @@ p {
     height: 80px;
   }
 
+  .layout-main {
+    grid-column: 1 / span 2;
+  }
+
+  .layout-sidebar {
+    grid-column: 1 / span 2;
+    height: 30vh;
+  }
+
   .footer {
     grid-template-columns: 1fr 1fr;
   }
@@ -141,6 +187,23 @@ p {
 }
 
 @media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+
+  .navigation a {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+
   .container {
     grid-template-columns: 1fr;
   }
@@ -166,4 +229,9 @@ p {
   .footer {
     grid-template-columns: 1fr;
   }
+
+  .footer > div {
+    margin-bottom: 15px;
+  }
+
 }
