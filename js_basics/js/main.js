@@ -178,3 +178,13 @@ console.log(document.getElementsByTagName('h2'))
 console.log(document.querySelector('h2')) // first one from previous previous
 console.log(document.querySelectorAll('h2')) // all
 
+echo('DOM Manipulation');
+let paragraph = document.querySelector('#first-p');
+//Add/Remove/Change Class
+console.log(paragraph);
+paragraph.style.color = "#ffbe0b";
+paragraph.classList.add('border')
+
+//Change Content
+let strong = document.querySelector('p#first-p > strong ');
+strong.textContent = "Dollar ($)";
