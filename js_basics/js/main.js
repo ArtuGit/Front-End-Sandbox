@@ -178,3 +178,7 @@ console.log(document.getElementsByTagName('h2'))
 console.log(document.querySelector('h2')) // first one from previous previous
 console.log(document.querySelectorAll('h2')) // all
 
+/* --- */
+echo('Event Listeners');
+let button = document.querySelector('button');
+button.addEventListener('click', () => console.log('The button was clicked.'));
