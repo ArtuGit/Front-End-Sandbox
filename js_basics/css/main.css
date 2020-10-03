@@ -61,3 +61,14 @@ div.block {
 p#first-p > strong {
   color: #ff006e;
 }
+
+button {
+  margin-top: 35px;
+}
+
+.li-hovered{
+  color: #ffbe0b;
+}
+.li-selected{
+  background-color: #8338ec;
+}
