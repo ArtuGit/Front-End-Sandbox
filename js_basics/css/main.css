@@ -1,5 +1,11 @@
 body {
-  background-color: #0080ff;
+  background-color: #3a86ff;
+  min-height: 100%;
+  margin: 2em;
+  font-size: 1em;
+  font-family: 'David Libre', serif;
+  line-height: 1.5em;
+
 }
 
 h1 {
@@ -22,9 +28,36 @@ h2 {
   list-style-type: circle;
 }
 .li-regular {
-  color: #C14543;
+  color: #ffbe0b;
 }
 
 #the-second {
-  color: maroon;
+  color: #8338ec;
+}
+
+.border {
+  border: 5px solid #8338ec;
+  padding: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+
+}
+
+div.block {
+  border: 1px solid #003049;
+  background: #fb5607;
+  text-align: center;
+  width: 10vw;
+  height: 5vh;
+}
+
+p#first-p > strong {
+  color: #ff006e;
 }
