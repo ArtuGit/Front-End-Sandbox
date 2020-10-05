@@ -2,15 +2,6 @@ let varGlobal = 'varGlobal'
 const greetingMsg = 'Hello World!'
 
 
-function echo(name, keywords) {
-  const li = '<li>' + name +
-      ((typeof keywords !== 'undefined') ? ': <span class="keyword">' + keywords + '</span>' : "")
-              + '</li>'
-  const existing = document.getElementById("list").innerHTML
-  document.getElementById("list").innerHTML = existing + li
-  console.log('---' + name + '---');
-}
-
 function checkGlobal() {
   console.log(varGlobal);
   let varLocal = 'varLocal' //redundant, needed to demonstrate
@@ -224,7 +215,6 @@ for (let i=0; i<lis.length; i++)
     this.classList.remove('li-hovered')
   });
   lis[i].addEventListener('click', function () {
-    console.log('232');
     this.classList.toggle('li-selected');
   });
 }
