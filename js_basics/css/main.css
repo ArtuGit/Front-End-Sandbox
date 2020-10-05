@@ -62,10 +62,14 @@ p#first-p > strong {
   color: #ff006e;
 }
 
-
 .img-center {
   margin-top: 35px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
+button {
+  margin-top: 35px;
+}
+

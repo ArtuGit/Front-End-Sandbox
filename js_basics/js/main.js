@@ -183,7 +183,7 @@ let paragraph = document.querySelector('#first-p');
 // Add/Remove/Change Class
 console.log(paragraph);
 paragraph.style.color = "#ffbe0b";
-paragraph.classList.add('border')
+paragraph.classList.add('border');
 
 // Change Content
 let strong = document.querySelector('p#first-p > strong ');
@@ -198,3 +198,32 @@ container = document.querySelector('.container');
 let div = document.createElement("div");
 div.classList.add('block');
 container.appendChild(div);
+/* --- */
+
+echo('Event Listeners');
+let flag = true;
+let button = document.querySelector('button');
+button.addEventListener('click', () => {
+  console.log('The button was clicked.');
+  if (flag) {
+    paragraph.style.background = '#8338ec';
+  }
+  else {
+    paragraph.style.background = '#3a86ff';
+  }
+  flag = !flag;
+});
+
+let lis = document.querySelectorAll('ul.ul-circle li');
+for (let i=0; i<lis.length; i++)
+{
+  lis[i].addEventListener('mouseover', function () {
+    this.classList.add('li-hovered')
+  });
+  lis[i].addEventListener('mouseout', function () {
+    this.classList.remove('li-hovered')
+  });
+  lis[i].addEventListener('click', function () {
+    this.classList.toggle('li-selected');
+  });
+}
