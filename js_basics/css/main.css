@@ -73,3 +73,11 @@ button {
   margin-top: 35px;
 }
 
+.li-hovered {
+  color: #fb5607;
+}
+
+
+.li-selected {
+  background-color: #ffbe0b;
+}

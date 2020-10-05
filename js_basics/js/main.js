@@ -224,6 +224,7 @@ for (let i=0; i<lis.length; i++)
     this.classList.remove('li-hovered')
   });
   lis[i].addEventListener('click', function () {
+    console.log('232');
     this.classList.toggle('li-selected');
   });
 }
