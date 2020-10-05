@@ -180,11 +180,21 @@ console.log(document.querySelectorAll('h2')) // all
 
 echo('DOM Manipulation');
 let paragraph = document.querySelector('#first-p');
-//Add/Remove/Change Class
+// Add/Remove/Change Class
 console.log(paragraph);
 paragraph.style.color = "#ffbe0b";
 paragraph.classList.add('border')
 
-//Change Content
+// Change Content
 let strong = document.querySelector('p#first-p > strong ');
 strong.textContent = "Dollar ($)";
+
+// Change Attribute
+let img = document.querySelector('img');
+img.setAttribute('src','https://picsum.photos/200/300')
+
+// Append Element
+container = document.querySelector('.container');
+let div = document.createElement("div");
+div.classList.add('block');
+container.appendChild(div);
