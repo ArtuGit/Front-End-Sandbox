@@ -69,7 +69,7 @@ p#first-p > strong {
   margin-right: auto;
 }
 
-button {
+button.click {
   margin-top: 35px;
 }
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JQuery Demo</title>
+  <title>JQuery Basics</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/jquery.css">
   <link href="https://fonts.googleapis.com/css2?family=David+Libre&display=swap" rel="stylesheet">
@@ -17,6 +17,24 @@
   <ul id="list">
   </ul>
 
+
+  <h2>HTML Form</h2>
+  <form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+
+  <h2>Paragraphs</h2>
   <div class="paragraphs">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam autem consectetur dolores, dolorum earum eum fugiat incidunt molestias nemo nihil nulla obcaecati quam recusandae reiciendis vitae. Aliquam doloribus error esse et eveniet ex explicabo facilis harum in incidunt ipsum, magnam minima nam nihil nisi nostrum quam rerum vel velit veritatis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa doloremque dolores eaque, eveniet, facilis illo labore maiores minus nostrum quam quidem quo quod recusandae sed sit ullam veniam! Deserunt, velit.</p>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto consequuntur cum illum neque non quam ut voluptas. Accusantium, commodi cum dicta dignissimos excepturi expedita illum, incidunt labore laudantium nemo numquam, porro quibusdam ullam vel vero! Ad asperiores aspernatur cum dolorum ducimus mollitia necessitatibus vero. Atque dicta officiis quaerat repellat? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aut deserunt, illum nam natus nesciunt nulla quas sed suscipit tenetur. Animi cupiditate delectus est harum inventore ipsa molestiae nemo temporibus!</p>
@@ -37,9 +55,9 @@
     <li>List 2 Item 3</li>
   </ul>
 
-  <button type="button">Click Me!</button>
+  <button type="button" class="add">Add</button>
 
-  <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" class="img-center">
+  <img src="https://brand.jquery.org/resources/jquery-mark-light.gif" class="img-center">
 
   <script src="js/common.js"></script>
   <script src="js/jquery.js"></script>
