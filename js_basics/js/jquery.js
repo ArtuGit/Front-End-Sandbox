@@ -58,16 +58,19 @@ echo ('Events',"letItRun()");
     }
   })
 
-/*  $(secondUlLis).on('mouseover', 'span',function (){
-    $(this).addClass('li-hovered');
-    console.log($(this).html());
-    //$(this).html($(this).html() + ' ' + '<a href="#remove" class="link-remove">Remove</a>');
-  })*/
-
-
   $(secondUlLis).on('mouseover', 'span',function (){
     $(this).addClass('span-hovered');
-    console.log($(this).parent().html());
+    let item = $(this).parent();
+    console.log(item);
+    if (($(item).has('div').length === 0)) {
+      console.log('Add');
+      let content = $(item).html();
+      console.log(content);
+      $(item).html(content + '<div class="remove"><a href="#remove" class="link-remove">Remove</a></div>');
+    }
+    else {
+      console.log('Miss');
+    }
   })
   $(secondUlLis).on('mouseout', 'span',function (){
     $(this).removeClass('span-hovered');
