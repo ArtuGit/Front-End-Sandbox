@@ -2,12 +2,11 @@
   margin-top: 5px;
 }
 
-.span-hovered {
-  color: #fb5607;
-}
-
-.span-selected, .span-selected  {
+.span-selected  {
   background-color: #ffbe0b;
 }
 
 
+.span-hovered {
+  color: #fb5607;
+}

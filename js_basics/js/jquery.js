@@ -36,11 +36,10 @@ echo ('Events',"letItRun()");
 
 //This is an mini app
 (function letItRun() { //just named wrapper, for reference
-  const itemName = '<span>List 2 Item</span> ';
+  const itemName = '<span class="arm">List 2 Item</span> ';
   let itemCount = 0;
   const secondUl = 'ul.ul-circle';
   const secondUlLis = 'ul.ul-circle li';
-  const secondUlLisContent = 'ul.ul-circle li span';
 
   $('#add').on('click', function (){
     itemCount = $(secondUlLis).length+1;
@@ -58,21 +57,11 @@ echo ('Events',"letItRun()");
     }
   })
 
-  $(secondUlLis).on('mouseover', 'span',function (){
+  $(secondUl).on('mouseover', 'li span',function (){
     $(this).addClass('span-hovered');
-    let item = $(this).parent();
-    console.log(item);
-    if (($(item).has('div').length === 0)) {
-      console.log('Add');
-      let content = $(item).html();
-      console.log(content);
-      $(item).html(content + '<div class="remove"><a href="#remove" class="link-remove">Remove</a></div>');
-    }
-    else {
-      console.log('Miss');
-    }
   })
-  $(secondUlLis).on('mouseout', 'span',function (){
+
+  $(secondUl).on('mouseout', 'li span',function (){
     $(this).removeClass('span-hovered');
   })
 
