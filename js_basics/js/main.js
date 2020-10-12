@@ -189,8 +189,8 @@ container = document.querySelector('.container');
 let div = document.createElement("div");
 div.classList.add('block');
 container.appendChild(div);
-/* --- */
 
+/* --- */
 echo('Event Listeners');
 let flag = true;
 let button = document.querySelector('button');
@@ -218,3 +218,70 @@ for (let i=0; i<lis.length; i++)
     this.classList.toggle('li-selected');
   });
 }
+
+/* --- */
+echo('Scope', 'outer()');
+let a = 'global';
+function outer() {
+  let b = 'outer';
+  function inner() {
+    let c = 'inner'
+    console.log("3. c=" + c);   // 'inner'
+    console.log("4. b=" + b);   // 'outer'
+    console.log("5. a=" + a);   // 'global'
+  }
+  console.log("1. a=" + a);     // 'global'
+  console.log("2. b=" + b);     // 'outer'
+  inner();
+}
+outer();
+console.log("6. a " + a);         // 'global'
+
+
+/* --- */
+echo('Closures','getPerson(),getCounter()');
+
+function getPerson() {
+  let name = 'Peter';
+
+  return function displayName() {
+    console.log(name);
+    return(name);
+  };
+}
+let person = getPerson();
+let name = person(); // 'Peter'
+console.log(name);
+
+function getCounter() {
+  let counter = 0;
+  return function() {
+    return counter++;
+  }
+}
+let count = getCounter();
+console.log(count());  // 0
+console.log(count());  // 1
+console.log(count());  // 2
+
+
+function GetPerson2(name) {
+  let secret = 'secret!';
+  this.name = name;
+  this.setName = function(newName) { this.name = newName }
+  this.setNameToFoo = function() { this.name = foo }
+  this.getSecret = function() { return secret }
+}
+
+let person2 = new GetPerson2('Max');
+console.log(person2.name) //> “Max”
+person2.setName('Oliver');
+console.log(person2.name); //> “Oliver”
+// person2.setNameToFoo() //> ERROR: foo is undefined
+
+let foo = 'Foo'
+person2.setNameToFoo()
+console.log(person2.name); //> “Foo”
+
+console.log(person2.secret) //> undefined
+console.log(person2.getSecret()) //> “secret!”
