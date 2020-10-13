@@ -1,9 +1,25 @@
 #carouselExampleIndicators
 {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
-h2 {
+h1 {
+  margin-bottom: 0.75em;
+}
+
+h2.section-first {
+  margin-bottom: 0.75em;
+}
+
+.section {
   margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.75em;
+}
+
+.grid > div.row {
+  height: 3em;
+}
+
+.row-margin {
+  margin-top: 2em;
 }
