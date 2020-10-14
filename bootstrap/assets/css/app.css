@@ -1,9 +1,10 @@
 #carouselExampleIndicators
 {
-  margin-bottom: 1.5em;
+  margin-top: 5em;
 }
 
 h1 {
+  margin-top: 1.5em;
   margin-bottom: 0.75em;
 }
 
@@ -23,3 +24,4 @@ h2.section-first {
 .row-margin {
   margin-top: 2em;
 }
+
