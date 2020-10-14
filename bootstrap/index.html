@@ -41,12 +41,22 @@
         </li>
       </ul>
       <form class="form-inline ml-auto mr-auto input-group-sm">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="addon-wrapping">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                  <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+              </svg>
+            </span>
+          </div>
+          <input class="form-control mr-sm-2" id="search-header" type="search" placeholder="Search" aria-label="Search">
+        </div>
         <button class="btn btn-outline-success my-2 my-sm-0 btn-sm" type="submit">Search</button>
       </form>
       <form class="form-inline">
-        <button class="btn btn-outline-secondary btn-sm" type="button">Sign In</button>
-        <button class="btn btn-outline-secondary btn-sm" type="button">Sign Up</button>
+        <button class="btn btn-outline-secondary btn-sm mr-1" type="button">Sign In</button>
+        <button class="btn btn-outline-secondary btn-sm ml-1" type="button">Sign Up</button>
       </form>
     </div>
   </div>
@@ -225,7 +235,7 @@
   </section>
 
 </div>
-<div class="container-fluid mt-5 vw-100" >
+<div class="container-fluid mt-5 calc(vw-100)-1" >
   <section>
     <div class="row no-gutters justify-content-center bg-secondary pt-5 pb-5">
       <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mt-2"><img src="assets/images/for-grid1.jpg" class="img-fluid" loading="lazy">
@@ -300,7 +310,13 @@
     </form>
   </section>
 
-  <h2 class="section">Icons</h2>
+  <h2 class="section">Icons
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-emoji-sunglasses" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path fill-rule="evenodd" d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM6.5 6.497V6.5h-1c0-.568.447-.947.862-1.154C6.807 5.123 7.387 5 8 5s1.193.123 1.638.346c.415.207.862.586.862 1.154h-1v-.003l-.003-.01a.213.213 0 0 0-.036-.053.86.86 0 0 0-.27-.194C8.91 6.1 8.49 6 8 6c-.491 0-.912.1-1.19.24a.86.86 0 0 0-.271.194.213.213 0 0 0-.036.054l-.003.01z"/>
+      <path d="M2.31 5.243A1 1 0 0 1 3.28 4H6a1 1 0 0 1 1 1v1a2 2 0 0 1-2 2h-.438a2 2 0 0 1-1.94-1.515L2.31 5.243zM9 5a1 1 0 0 1 1-1h2.72a1 1 0 0 1 .97 1.243l-.311 1.242A2 2 0 0 1 11.439 8H11a2 2 0 0 1-2-2V5z"/>
+    </svg>
+  </h2>
   <section>
 
     <h3 class="section h4">Bootstrap</h3>
@@ -323,7 +339,10 @@
         <path fill-rule="evenodd" d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3z"/>
         <path d="M15 7v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z"/>
       </svg>
+
+      <p class="mt-5">See above the buttons and the search form in the header.</p>
     </section>
+
 
     <h3 class="section h4">FontAwesome</h3>
   </section>

@@ -28,3 +28,7 @@ h2.section-first {
 section.buttons svg {
   margin-left: 2em;
 }
+
+#search-header {
+  width: 10em;
+}
