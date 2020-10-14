@@ -25,3 +25,6 @@ h2.section-first {
   margin-top: 2em;
 }
 
+section.buttons svg {
+  margin-left: 2em;
+}
