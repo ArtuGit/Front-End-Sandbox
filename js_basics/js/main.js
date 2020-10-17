@@ -277,11 +277,54 @@ let person2 = new GetPerson2('Max');
 console.log(person2.name) //> “Max”
 person2.setName('Oliver');
 console.log(person2.name); //> “Oliver”
-// person2.setNameToFoo() //> ERROR: foo is undefined
+// person2.setNameToFoo(); //> ERROR: foo is undefined
 
 let foo = 'Foo'
 person2.setNameToFoo()
 console.log(person2.name); //> “Foo”
 
-console.log(person2.secret) //> undefined
+console.log(person2.secret); //> undefined
 console.log(person2.getSecret()) //> “secret!”
+
+/* --- */
+echo('Promises','fakeRequestPromise()');
+
+function fakeRequest(url) {
+  const delay = Math.floor(Math.random() * 100);
+  setTimeout(() => {
+    console.log(`Requesting ${url} ...`);
+  }, delay);
+  if (delay > 30)
+    return true;
+  else
+    return false;
+}
+
+const fakeRequestPromise = (url) => {
+  return new Promise((resolve, reject) => {
+    let result = fakeRequest(url);
+    if (!result)
+      reject(`Connection Timeout for ${url}" :(`);
+    else
+      resolve(`Here is your fake data from "${url}".`);
+  })
+}
+
+request0 = fakeRequestPromise('api/callback0');
+request1 = fakeRequestPromise('api/callback1')
+  .then((data) => {
+    console.log("Success (callback1)!");
+    console.log(data);
+    return fakeRequestPromise('api/callback2');
+  })
+  .then((data) => {
+    console.log("Success (callback2)!");
+    console.log(data);
+    return fakeRequestPromise('api/callback2');
+  })
+  .catch((err) => {
+    console.log("Rejected!");
+    console.log(err);
+  })
+
+
