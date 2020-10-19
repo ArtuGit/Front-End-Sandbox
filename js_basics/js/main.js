@@ -287,7 +287,7 @@ console.log(person2.secret); //> undefined
 console.log(person2.getSecret()) //> “secret!”
 
 /* --- */
-echo('Promises','fakeRequestPromise()');
+echo('Promises','fakeRequestPromise,delayedColorChange');
 
 function fakeRequest(url) {
   const delay = Math.floor(Math.random() * 100);
@@ -310,7 +310,12 @@ const fakeRequestPromise = (url) => {
   })
 }
 
-request0 = fakeRequestPromise('api/callback0');
+request0 = fakeRequestPromise('api/callback0')
+  .catch((err) => {
+    console.log("Callback 0 is rejected, an error is catch!");
+    console.log(err);
+  });
+
 request1 = fakeRequestPromise('api/callback1')
   .then((data) => {
     console.log("Success (callback1)!");
@@ -327,4 +332,49 @@ request1 = fakeRequestPromise('api/callback1')
     console.log(err);
   })
 
+const delayedColorChange = (color, element, delay=1000) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const object = document.querySelector(`div.container div.block:nth-child(${element})`);
+      object.style.backgroundColor = color;
+      resolve();
+    }, delay)
+  })
+}
 
+echo('async','rainbow(),printRainbow()');
+echo('await','rainbow(),printRainbow()');
+
+async function rainbow() {
+  await delayedColorChange('red', 1);
+  await delayedColorChange('orange', 2);
+  await delayedColorChange('yellow', 3);
+  await delayedColorChange('green', 4);
+  await delayedColorChange('blue', 5);
+  await delayedColorChange('indigo', 6);
+  await delayedColorChange('violet', 7);
+  return "All colors done."
+}
+
+// rainbow().then(() => console.log("END OF RAINBOW!"))
+async function printRainbow() {
+  await rainbow();
+  console.log("End of rainbow.")
+}
+printRainbow();
+
+async function makeTwoRequests() {
+  try {
+    let data1 = await fakeRequestPromise('/page1');
+    console.log(data1);
+    let data2 = await fakeRequestPromise('/page2');
+    console.log(data2);
+  } catch (e) {
+    console.log("The Two request sequence is failed, an error is caught!")
+    console.log("error is:", e)
+  }
+}
+
+makeTwoRequests();
+
+echo('try, catch','request0, request1, makeTwoRequests()');
