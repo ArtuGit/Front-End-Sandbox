@@ -1,3 +1,7 @@
+*::selection {
+  background-color: #95d5b2;
+}
+
 body {
   background-color: #e6e8e6;
   color: #080708;
@@ -60,6 +64,8 @@ a {
 
 }
 
-#text-prop3 {
-
+.paragraphs p::first-letter {
+  text-transform: uppercase;
+  color: #e10020;
+  font-size: 1.5em;
 }
