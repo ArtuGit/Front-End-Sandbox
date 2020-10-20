@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML/CSS Sandbox</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
 
@@ -11,11 +11,25 @@
 
 <h2>Blocks</h2>
 
-<div>Block 1</div>
-<div>Block 2</div>
-<div>Block 3</div>
-<div>Block 4</div>
-<div>Block 5</div>
+<section id="blocks">
+
+  <section class="blocks-1type">
+    <div class="blocks-1type" id="block1">Block 1</div>
+    <div class="blocks-1type" id="block2">Block 2</div>
+  </section>
+
+  <section class="blocks-2type">
+    <div class="blocks-2type" id="block3">Block 3</div>
+    <div class="blocks-2type" id="block4">Block 4</div>
+    <div class="blocks-2type" id="block5">Block 5</div>
+  </section>
+
+  <div id="dog">
+    <span>Block 6</span>
+    <img alt="" src="images/dog.png">
+    <h5>I am a Dog</h5>
+  </div>
+</section>
 
 <h2>Spans</h2>
 <span>Span 1</span>
