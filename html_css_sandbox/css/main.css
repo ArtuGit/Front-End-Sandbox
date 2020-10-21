@@ -74,38 +74,34 @@ a {
   font-size: 1.5em;
 }
 
-div#dog {
-  width: 210px;
-  border: 3px solid gray;
-  background-color: #3772ff;
-  height: auto;
-}
-
-#dog img {
-  display: block;
-  width: 207px;
-  height: 207px;
-  margin: auto;
-  background-color: #e76f51;
-  border: 5px solid #e10020;
-  border-radius: 50%;
-}
-
-div#dog span {
-  text-align: center;
-  display: block;
-}
-
-#dog h5 {
-  text-align: center;
-  font-size: 1.3em;
-  margin: 10px auto 10px auto;
-}
-
 #blocks {
-  width: 800px;
-  height: 1100px;
+  width: 625px;
+  height: 470px;
   border: 3px solid black;
+  padding: 10px;
+  position: relative; /* for descendants */
+}
+
+section.blocks-1type {
+  margin: 5px;
+  border: 5px solid gray;
+  width: 210px;
+}
+
+section.blocks-2type {
+  margin: 5px;
+  border: 5px solid gray;
+  width: 110px;
+  position: relative;
+  top: -438px;
+  left: 240px;
+}
+
+div.title {
+  background-color: #e6e8e6;
+  border-bottom: 5px solid gray;
+  text-align: center;
+  font-weight: bold;
 }
 
 div.blocks-1type {
@@ -127,18 +123,6 @@ div.blocks-2type {
   font-style: italic;
 }
 
-section.blocks-1type {
-  margin: 10px;
-  border: 5px solid gray;
-  width: 210px;
-}
-
-section.blocks-2type {
-  margin: 10px;
-  border: 5px solid gray;
-  top: 100px;
-}
-
 div#block1 {
   background-color: #fdca40;
 }
@@ -158,4 +142,38 @@ div#block4 {
 
 div#block5 {
   background-color: #fdca40;
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+div#dog {
+  width: 210px;
+  border: 5px solid gray;
+  background-color: #3772ff;
+  height: auto;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+#dog img {
+  display: block;
+  width: 202px;
+  height: 207px;
+  margin: auto;
+  background-color: #e76f51;
+  border: 5px solid #e10020;
+  border-radius: 50%;
+}
+
+div#dog span {
+  text-align: center;
+  display: block;
+}
+
+#dog h5 {
+  text-align: center;
+  font-size: 1.3em;
+  margin: 10px auto 10px auto;
 }
