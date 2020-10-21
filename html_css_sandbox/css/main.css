@@ -75,7 +75,7 @@ a {
 }
 
 #blocks {
-  width: 625px;
+  width: 80%;
   height: 470px;
   border: 3px solid black;
   padding: 10px;
@@ -124,11 +124,11 @@ div.blocks-2type {
 }
 
 div#block1 {
-  background-color: #fdca40;
+  background-color: #3772ff;
 }
 
 div#block2 {
-  background-color: #3772ff;
+  background-color: #fdca40;
 }
 
 div#block3 {
