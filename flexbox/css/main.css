@@ -53,18 +53,22 @@ p {
   padding: 20px;
 }
 
+.content-wide {
+  padding: 0;
+}
+
 .container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   padding: 0;
-  margin: 20px 0 0 0;
+  margin: 20px 0;
 }
 
 .item {
   border: 1px solid #264653;
   background: #2a9d8f;
-  padding: 5px 5px 15px 5px;
+  padding: 20px 5px 15px 5px;
   width: 30%;
   height: auto;
   margin: 20px auto 20px auto;
@@ -73,6 +77,14 @@ p {
   -webkit-box-shadow: 5px 5px 3px -2px #264653;
   -moz-box-shadow: 5px 5px 3px -2px #264653;
   box-shadow: 5px 5px 3px -2px #264653;
+}
+
+.item span {
+  font-weight: bold;
+}
+
+.item p {
+  margin-top: 15px;
 }
 
 .item-footer {
@@ -115,7 +127,7 @@ footer {
   align-items: center;
 }
 
-div.item > span {
+section.item > span {
   display: block;
   margin-top: 10px;
   margin-bottom: 15px;
@@ -123,11 +135,61 @@ div.item > span {
   color: whitesmoke;
 }
 
-#tall {
-}
-
 #add {
   margin-top: 30px;
+}
+
+div.container-wide {
+  width: 100%;
+  height: auto;
+  background-color: #264653;
+  display: flex;
+  flex-flow: row wrap; /* default */
+  justify-content: space-between;
+}
+
+.container-wide div {
+  padding: 15px;
+  flex-basis: 30%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.container-wide div span {
+  font-weight: bold;
+}
+
+.container-wide div p {
+  margin-top: 15px;
+}
+
+.container-wide div:nth-child(1) {
+  background-color: #74c69d;
+  width: 30%;
+}
+
+.container-wide div:nth-child(2) {
+  background-color: #52b788;
+  width: 30%;
+}
+
+.container-wide div:nth-child(3) {
+  background-color: #40916c;
+  width: 30%;
+}
+
+.container-wide div:nth-child(4) {
+  background-color: #2d6a4f;
+  color: black;
+  width: 45%;
+  display: flex;
+  align-items: center;
+}
+
+.container-wide div:nth-child(5) {
+  background-color: #1b4332;
+  color: wheat;
+  width: 45%;
 }
 
 @media all and (max-width: 900px) {
@@ -139,6 +201,9 @@ div.item > span {
     width: 45%;
   }
 
+  .container-wide div {
+    flex-basis: 45%;
+  }
 }
 
 @media all and (max-width: 600px) {
@@ -146,7 +211,6 @@ div.item > span {
     flex-flow: column wrap;
     padding: 0;
   }
-
   .navigation a {
     text-align: center;
     font-size: 1.2em;
@@ -167,5 +231,8 @@ div.item > span {
     width: 90%;
   }
 
+  .container-wide div {
+    flex-basis: 80%;
+  }
 }
 
