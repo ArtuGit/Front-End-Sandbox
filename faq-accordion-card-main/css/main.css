@@ -16,9 +16,8 @@ div.card {
   padding-right: 2em;
 }
 
-h1 {
+.faq-panel-2 h1 {
   font-size: 3em;
-  text-align: center;
   font-weight: bold;
   margin-bottom: 0.8em;
   letter-spacing: 1px;
@@ -34,7 +33,7 @@ div.qa:last-child {
   margin-bottom: 4em;
 }
 
-span {
+.qa span {
   display: inline-block;
   width: 90%;
   line-height: 1.3em;
@@ -43,7 +42,7 @@ span {
   color: hsl(237, 12%, 33%);
 }
 
-span:after {
+.qa span:after {
   display: inline-block;
   position: absolute;
   top: 1.2em;
@@ -59,11 +58,16 @@ span:after {
   margin-top: 1em;
   color: hsl(240, 6%, 50%);
   line-height: 1.5em;
+  display: none;
 }
 
-@media (max-width: 800px) {
+.open p {
+  display: block;
+}
 
-  .faq1 img {
+@media (max-width: 1350px) {
+
+  .faq1-panel-1 img {
     display: none;
   }
 
@@ -83,61 +87,81 @@ span:after {
     min-width: 375px;
   }
 
-  div.faq1 {
+  div.faq1-panel-1 {
     height: 100px;
     background-image: url("../images/bg-pattern-mobile.svg");
     background-position: center;
     background-repeat: no-repeat;
     margin-bottom: 3em;
   }
+
+  .faq-panel-2 h1 {
+    text-align: left;
+  }
 }
 
-@media all and (min-width: 800px) {
-  main {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: stretch;
-    margin-right: 5%;
+@media all and (min-width: 1350px) {
+  div.faq-graphics-shifted {
+    display: none;
   }
 
-
-  div.faq-graphics-shifted {
-    background-image: url("../images/illustration-box-desktop.svg");
-    background-position: center;
-    background-position-y: 50%;
-    background-repeat: no-repeat;
-    position: relative;
-    left: 5%;
-    z-index: 1;
+  main {
+    flex-basis: 60%;
+    flex-shrink: 0;
+    flex-grow: 0;
   }
 
   div.card {
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: stretch;
+    position: relative;
+    height: 33rem;
   }
 
-  div.faq1 {
+  div.faq1-panel-1 {
     flex-basis: 50%;
-    flex-grow: 1;
-    background-image: url("../images/bg-pattern-desktop.svg");
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position-y: 150%;
-    background-position-x: -40%;
-    overflow: hidden;
+    flex-grow: 0;
   }
 
-  .faq1 img {
+  img#bg-desktop {
     display: block;
-    width: 80%;
-
+    position: absolute;
+    width: 65rem;
+    top: -20rem;
+    left: -35rem;
   }
 
-  div.faq2 {
+  img#woman {
+    display: block;
+    position: absolute;
+    width: 40rem;
+    left: -10rem;
+  }
+
+  img#box {
+    display: block;
+    position: absolute;
+    width: 20rem;
+    top: 12rem;
+    left: -8rem;
+  }
+
+  div.faq-panel-2 {
+    padding-right: 5em;
+    margin-bottom: 3em;
     flex-basis: 50%;
-    flex-grow: 1;
+    flex-grow: 2;
   }
+
+  .faq-panel-2 h1 {
+    margin-top: 2em;
+  }
+
+  .faq-content {
+    border: 1px solid firebrick;
+  }
+
 }
