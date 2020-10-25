@@ -5,7 +5,7 @@ body {
   font-size: 12px;
 
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -65,43 +65,80 @@ div.qa:last-child {
   display: block;
 }
 
-@media (max-width: 1350px) {
+.attribution {
+  color: whitesmoke;
+  font-weight: 400;
+  padding: 2em;
+}
 
-  .faq1-panel-1 img {
+.attribution a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-weight: 700;
+}
+
+.attribution a:hover {
+  color: #F47B56;
+}
+
+@media (max-width: 1000px) {
+
+  img#box, img#bg-desktop, img#woman-desktop {
     display: none;
   }
 
-  div.faq-graphics-shifted {
-    height: 200px;
-    background-image: url("../images/illustration-woman-online-mobile.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    top: 100px;
-    right: 1.4em;
+  main {
+    width: 90%;
   }
 
   div.card {
     padding-left: 2em;
-    margin-bottom: 4em;
     min-width: 375px;
+    margin-top: 180px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
   }
 
-  div.faq1-panel-1 {
-    height: 100px;
-    background-image: url("../images/bg-pattern-mobile.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 3em;
+  div.faq-panel-1 {
+    padding-bottom: 3em;
+    position: relative;
   }
+
+  div.cover-image {
+    width: 300px;
+    position: relative;
+  }
+
+  div.bg-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img#bg-mobile {
+    display: block;
+  }
+
+  img#woman-mobile {
+    display: block;
+    position: relative;
+    top: -220px;
+    margin-bottom: -200px;
+    right: 17px;
+  }
+
 
   .faq-panel-2 h1 {
-    text-align: left;
+    text-align: center;
   }
 }
 
-@media all and (min-width: 1350px) {
-  div.faq-graphics-shifted {
+@media all and (min-width: 1000px) {
+  img#woman-mobile {
     display: none;
   }
 
@@ -112,41 +149,56 @@ div.qa:last-child {
   }
 
   div.card {
-    width: 100%;
+    width: 950px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: stretch;
-    position: relative;
-    height: 33rem;
   }
 
-  div.faq1-panel-1 {
+  div.faq-panel-1 {
     flex-basis: 50%;
     flex-grow: 0;
+    position: relative;
+    height: 500px;
+  }
+
+  div.cover-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  div.bg-wrapper {
+    display: block;
+    position: absolute;
+    height: 200%;
+    width: 200%;
+    top: -62%;
+    left: -120%;
   }
 
   img#bg-desktop {
-    display: block;
-    position: absolute;
-    width: 65rem;
-    top: -20rem;
-    left: -35rem;
+    width: 100%;
+    height: 100%;
   }
 
-  img#woman {
+  img#woman-desktop {
     display: block;
-    position: absolute;
-    width: 40rem;
-    left: -10rem;
+    position: relative;
+    width: 100%;
+    top: 16%;
+    left: -19%;
   }
 
   img#box {
+    width: 40%;
     display: block;
     position: absolute;
-    width: 20rem;
-    top: 12rem;
-    left: -8rem;
+    z-index: 1;
+    top: 43%;
+    left: -20%;
   }
 
   div.faq-panel-2 {
@@ -158,10 +210,6 @@ div.qa:last-child {
 
   .faq-panel-2 h1 {
     margin-top: 2em;
-  }
-
-  .faq-content {
-    border: 1px solid firebrick;
   }
 
 }
