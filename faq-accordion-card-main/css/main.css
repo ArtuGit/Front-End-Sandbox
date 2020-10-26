@@ -23,26 +23,36 @@ div.card {
   letter-spacing: 1px;
 }
 
-div.qa {
+div.qa-accordion {
   border-bottom: 1px solid hsl(240, 5%, 91%);
   padding: 1.2em 0 1.2em;
   position: relative;
 }
 
-div.qa:last-child {
+div.qa-accordion:last-child {
   margin-bottom: 4em;
 }
 
-.qa span {
+.qa-accordion span {
   display: inline-block;
   width: 90%;
   line-height: 1.3em;
   font-size: 13px;
-  font-weight: 700;
   color: hsl(237, 12%, 33%);
+  transition: .2s ease-out;
 }
 
-.qa span:after {
+.qa-accordion.open span {
+  font-weight: 700;
+}
+
+.qa-accordion span:hover {
+  color: hsl(14, 88%, 65%);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.qa-accordion span:after {
   display: inline-block;
   position: absolute;
   top: 1.2em;
@@ -54,14 +64,18 @@ div.qa:last-child {
   width: 10px;
 }
 
-.qa p {
+.qa-accordion.open span:hover:after {
+  transform: rotate(0.5turn);
+}
+
+.qa-accordion p {
   margin-top: 1em;
   color: hsl(240, 6%, 50%);
   line-height: 1.5em;
   display: none;
 }
 
-.open p {
+.qa-accordion.open p {
   display: block;
 }
 
