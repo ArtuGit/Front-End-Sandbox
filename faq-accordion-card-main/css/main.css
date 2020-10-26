@@ -72,11 +72,20 @@ div.qa-accordion:last-child {
   margin-top: 1em;
   color: hsl(240, 6%, 50%);
   line-height: 1.5em;
-  display: none;
+
+  /* Hide */
+  min-height: 0;
+  max-height: 0;
+  opacity: 0;
+
+  transition: all .5s ease-in-out;
 }
 
 .qa-accordion.open p {
-  display: block;
+  /* Show */
+  min-height: auto;
+  max-height: initial;
+  opacity: initial;
 }
 
 .attribution {
@@ -225,5 +234,4 @@ div.qa-accordion:last-child {
   .faq-panel-2 h1 {
     margin-top: 2em;
   }
-
 }
