@@ -1,5 +1,9 @@
 ## GitHub Pages
 
+## Demo
+- [FAQ Accordion Card](https://artugit.github.io/Front-End-Practices/faq-accordion-card-main)
+
+## Practices
 - [JS Sandbox](https://artugit.github.io/Front-End-Practices/js_sandbox)
 - [JQuery Sandbox](https://artugit.github.io/Front-End-Practices/js_sandbox/jquery.html)
 - [CSS Flexbox Layout](https://artugit.github.io/Front-End-Practices/flexbox)
