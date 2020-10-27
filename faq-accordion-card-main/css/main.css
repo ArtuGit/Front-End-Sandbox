@@ -72,7 +72,7 @@ div.qa-accordion:last-child {
   width: 10px;
 }
 
-.qa-accordion.open span:hover:after {
+.qa-accordion.open span:after {
   transform: rotate(0.5turn);
 }
 
