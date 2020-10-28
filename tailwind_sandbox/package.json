@@ -11,7 +11,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "postcss app/css/main.css -o dist/css/main.css --verbose"
+    "build": "postcss app/css/main.css -o dist/css/main.css --verbose",
+    "watch": "postcss app/css/main.css -wo dist/css/main.css --verbose"
   },
   "author": "",
   "license": "ISC"
