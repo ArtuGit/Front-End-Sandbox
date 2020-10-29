@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,8 +12,8 @@ body {
   min-height: 100vh;
   font-size: 12px;
 
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 
   display: flex;
   flex-flow: column nowrap;
@@ -25,26 +27,26 @@ div.card {
 }
 
 .faq-panel-2 h1 {
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 0.8em;
+  margin-bottom: 0.8rem;
   letter-spacing: 1px;
 }
 
 div.qa-accordion {
   border-bottom: 1px solid hsl(240, 5%, 91%);
-  padding: 1.2em 0 1.2em;
+  padding: 1.2em 0 1.2rem;
   position: relative;
 }
 
 div.qa-accordion:last-child {
-  margin-bottom: 4em;
+  margin-bottom: 4rem;
 }
 
 .qa-accordion span {
   display: inline-block;
   width: 90%;
-  line-height: 1.3em;
+  line-height: 1.3rem;
   font-size: 13px;
   color: hsl(237, 12%, 33%);
   transition: .2s ease-out;
@@ -63,7 +65,7 @@ div.qa-accordion:last-child {
 .qa-accordion span:after {
   display: inline-block;
   position: absolute;
-  top: 1.2em;
+  top: 1.2rem;
   right: 0;
   background-image: url('../images/icon-arrow-down.svg');
   content: '';
@@ -77,9 +79,9 @@ div.qa-accordion:last-child {
 }
 
 .qa-accordion p {
-  margin-top: 1em;
+  margin-top: 1rem;
   color: hsl(240, 6%, 50%);
-  line-height: 1.5em;
+  line-height: 1.5rem;
 
   /* Hide */
   min-height: 0;
@@ -99,7 +101,7 @@ div.qa-accordion:last-child {
 .attribution {
   color: whitesmoke;
   font-weight: 400;
-  padding: 2em;
+  padding: 2rem;
 }
 
 .attribution a {
@@ -120,7 +122,7 @@ div.qa-accordion:last-child {
 
   main {
     width: 90%;
-    padding-top: 7em;
+    padding-top: 7rem;
   }
 
   div.card {
@@ -134,7 +136,7 @@ div.qa-accordion:last-child {
   }
 
   div.faq-panel-1 {
-    padding-bottom: 3em;
+    padding-bottom: 3rem;
     position: relative;
   }
 
@@ -229,13 +231,13 @@ div.qa-accordion:last-child {
   }
 
   div.faq-panel-2 {
-    padding-right: 5em;
+    padding-right: 5rem;
     flex-basis: 50%;
     flex-grow: 0;
     flex-shrink: 0;
   }
 
   .faq-panel-2 h1 {
-    margin-top: 2em;
+    margin-top: 2rem;
   }
 }
