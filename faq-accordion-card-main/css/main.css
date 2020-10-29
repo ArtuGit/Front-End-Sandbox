@@ -6,11 +6,20 @@
   padding: 0;
 }
 
+/*
+  This will hide the focus indicator if the element receives focus via the mouse,
+  but it will still show up on keyboard focus.
+  https://github.com/WICG/focus-visible
+*/
+* :focus:not(.focus-visible) {
+  outline: none;
+}
+
 body {
   font-family: 'Kumbh Sans', sans-serif;
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   min-height: 100vh;
-  font-size: 12px;
+  font-size: 0.8rem;
 
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -35,34 +44,44 @@ div.card {
 
 div.qa-accordion {
   border-bottom: 1px solid hsl(240, 5%, 91%);
-  padding: 1.2em 0 1.2rem;
+  padding-bottom: .5rem;
+
   position: relative;
+  border: 1px solid darkgreen;
 }
 
 div.qa-accordion:last-child {
   margin-bottom: 4rem;
 }
 
-.qa-accordion span {
+div.question {
   display: inline-block;
   width: 90%;
-  line-height: 1.3rem;
-  font-size: 13px;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+
+  line-height: 1.2rem;
+  font-size: .9rem;
   color: hsl(237, 12%, 33%);
   transition: .2s ease-out;
+  border: none;
 }
 
-.qa-accordion.open span {
+div.question h2{
+  all: inherit;
+}
+
+div.qa-accordion.open div.question h2 {
   font-weight: 700;
 }
 
-.qa-accordion span:hover {
+div.question:hover {
   color: hsl(14, 88%, 65%);
   font-weight: 700;
   cursor: pointer;
 }
 
-.qa-accordion span:after {
+div.question:after {
   display: inline-block;
   position: absolute;
   top: 1.2rem;
@@ -72,14 +91,14 @@ div.qa-accordion:last-child {
   background-size: 10px 10px;
   height: 10px;
   width: 10px;
+  border: 1px solid gray;
 }
 
-.qa-accordion.open span:after {
+.open div.question:after {
   transform: rotate(0.5turn);
 }
 
 .qa-accordion p {
-  margin-top: 1rem;
   color: hsl(240, 6%, 50%);
   line-height: 1.5rem;
 
@@ -89,6 +108,8 @@ div.qa-accordion:last-child {
   opacity: 0;
 
   transition: all .5s ease-in-out;
+
+  border: 1px solid darkgoldenrod;
 }
 
 .qa-accordion.open p {
@@ -238,6 +259,10 @@ div.qa-accordion:last-child {
   }
 
   .faq-panel-2 h1 {
-    margin-top: 2rem;
+    margin-top: 4rem;
+  }
+
+  .faq-content {
+    margin-top: 1rem;
   }
 }
