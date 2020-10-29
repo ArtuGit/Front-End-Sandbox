@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accessibility</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<h1>Accessibility</h1>
+<h2>The tasks:</h2>
+
+<section class="intro">
+
+<ul>
+  <li>Show outline only for tab navigation, not on focus</li>
+  <li>Handle clicks and key pressing for elements</li>
+</ul>
+
+  <p>Use "Tab" on keyboard to navigate. </p>
+</section>
+
+<h2>Implementation</h2>
+
+<section class="buttons">
+  <h3>Buttons</h3>
+  <p>Classical buttons do not solve due to appearance.</p>
+  <button id="b1">No action</button>
+  <button id="b2" onclick="handleBtnClick()">Click me!</button>
+  <button id="b3">Press Me!</button>
+</section>
+
+<section class="d-buttons">
+  <h3>div Buttons</h3>
+  <p>Pseudo buttons work but are not recommended.<p>
+  <div id="db1" role="button">Wrong Button, no 'tabindex'</div>
+  <div id="db2" role="button" tabindex="0">Click me!</div>
+  <div id="db3" role="button" tabindex="0">Press Me!</div>
+</section>
+
+<section class="stripped-buttons">
+  <h3>Stripped Buttons</h3>
+  <div>
+    <button id="sb1">Wrong Stripped ('all: inherit' from div)</button>
+  </div>
+  <div>
+    <button id="sb2">Click Me!</button>
+  </div>
+  <div>
+    <button id="sb3">Press Me!</button>
+  </div>
+</section>
+
+<section>
+  <h2>References</h2>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role">ARIA: button role</a></li>
+    <li><a href="https://css-tricks.com/keyboard-only-focus-styles/">Keyboard-Only Focus Styles</a></li>
+  </ul>
+</section>
+
+<script src="js/main.js"></script>
+<script src="js/focus-visible.min.js"></script>
+</body>
+
+</html>
