@@ -15,6 +15,19 @@
   outline: none;
 }
 
+/* Animation for the box*/
+@keyframes floating {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
 body {
   font-family: 'Kumbh Sans', sans-serif;
   background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
@@ -253,6 +266,7 @@ div.question h2:after {
     top: 210px;
     left: -90px;
     z-index: 1;
+    animation: floating 4s ease-in-out infinite;
   }
 
   div.faq-panel-2 {
