@@ -201,6 +201,7 @@ div.question h2:after {
     flex-basis: 60%;
     flex-shrink: 0;
     flex-grow: 0;
+    padding-top: 5%;
   }
 
   div.card {
