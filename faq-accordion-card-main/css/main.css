@@ -81,7 +81,6 @@ div.question h2:hover {
   color: hsl(14, 88%, 65%);
   font-weight: 700;
   cursor: pointer;
-!important;
 }
 
 div.question h2:after {
@@ -106,7 +105,7 @@ div.question h2:after {
   max-height: 0;
   opacity: 0;
 
-  transition: all .5s ease-in-out;
+  transition: opacity 250ms ease-out, max-height 250ms 100ms ease-out;
 }
 
 .qa-accordion.open p {
@@ -114,6 +113,8 @@ div.question h2:after {
   min-height: auto;
   max-height: initial;
   opacity: initial;
+
+  transition: opacity 250ms ease-out, max-height 250ms 100ms ease-out;
 }
 
 .attribution {
