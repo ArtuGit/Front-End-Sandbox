@@ -58,8 +58,7 @@ div.question {
   margin-bottom: .2rem;
   font-size: .9rem;
   color: hsl(237, 12%, 33%);
-
-  transition: .2s ease-out;
+  position: relative;
 }
 
 div.qa-accordion.open div.question h2 {
@@ -74,13 +73,13 @@ div.question h2 {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-
 }
 
 div.question h2:hover {
   color: hsl(14, 88%, 65%);
   font-weight: 700;
   cursor: pointer;
+  transition: all 200ms;
 }
 
 div.question h2:after {
@@ -97,6 +96,7 @@ div.question h2:after {
 }
 
 .qa-accordion p {
+  width: 98%;
   color: hsl(240, 6%, 50%);
   line-height: 1.5rem;
 
