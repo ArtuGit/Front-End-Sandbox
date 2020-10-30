@@ -89,10 +89,12 @@ div.question h2:after {
   background-size: cover;
   height: .56rem;
   width: .8rem;
+  transition: transform .5s ease-in-out;
 }
 
 .open div.question h2:after {
   transform: rotate(0.5turn);
+  transition: transform 1s;
 }
 
 .qa-accordion p {
