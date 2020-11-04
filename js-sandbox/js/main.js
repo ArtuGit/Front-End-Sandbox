@@ -76,20 +76,21 @@ const funcDeclare = function (param) {
   return 'func:' + param
 }
 console.log(typeof (funcDeclare)) //function
-const funcResult = funcDeclare('1') //function
-console.log(typeof (funcResult)) //function
+const funcResult = funcDeclare('1')
+console.log(typeof (funcResult)) //string
 console.log(funcResult) //func:1
 
 /* --- */
 echo('Function as var', 'funcDeclare1,funcResult1')
 
-function funcDeclare1(param) {
+func1 = function funcDeclare1(param) {
   return 'func:' + param
 }
 
-console.log(typeof (funcDeclare1)) //function
-const funcResult1 = funcDeclare1('2') //function
-console.log(typeof (funcResult1)) //function
+console.log(typeof (func1)) //function
+console.log(typeof (func1())) //string
+const funcResult1 = func1('2')
+console.log(typeof (funcResult1)) //string
 console.log(funcResult1) //func:2
 
 /* --- */
@@ -138,6 +139,10 @@ for (let i = 0; i < friends3.length; i++) { //Method 1. 'while is possible too
   console.log(friends3[i])
 }
 friends3.forEach((item) => console.log(item))
+
+//Map
+const friends4 = friends.map(x => 'Name: ' + x);
+console.log(friends4);
 
 /* --- */
 echo('Objects', "dog")
@@ -256,8 +261,8 @@ function getPerson() {
 }
 
 let person = getPerson();
-let name = person(); // 'Peter'
-console.log(name);
+let name = person();
+console.log(name); // Peter
 
 function getCounter() {
   let counter = 0;
@@ -322,6 +327,8 @@ const fakeRequestPromise = (url) => {
       resolve(`Here is your fake data from "${url}".`);
   })
 }
+
+console.log(typeof (fakeRequestPromise)); //function
 
 request0 = fakeRequestPromise('api/callback0')
   .catch((err) => {
