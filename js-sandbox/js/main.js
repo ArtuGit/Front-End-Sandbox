@@ -399,3 +399,77 @@ async function makeTwoRequests() {
 makeTwoRequests();
 
 echo('try, catch', 'request0, request1, makeTwoRequests()');
+
+echo('JSON');
+const sourceJSON = ` 
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "isAlive": true,
+  "age": 27,
+  "address": {
+    "streetAddress": "21 2nd Street",
+    "city": "New York",
+    "state": "NY",
+    "postalCode": "10021-3100"
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "212 555-1234"
+    },
+    {
+      "type": "office",
+      "number": "646 555-4567"
+    }
+  ],
+  "children": [],
+  "spouse": null
+}
+`; //text in backticks
+
+const person3 = JSON.parse(sourceJSON);
+console.log(typeof (person3)); //object
+console.log(person3.firstName); //John
+console.log(person3.phoneNumbers); // array content
+const dogJSON = JSON.stringify(dog);
+console.log(dogJSON);
+
+echo('XMLHttpRequest (XHR)');
+const req = new XMLHttpRequest();
+req.onload = function () {
+  console.log('Success: ' + this);
+  const res = JSON.parse(this.responseText);
+  console.log(res.ticker.price);
+}
+req.onerror = function () {
+  console.log('Error: ' + this);
+}
+req.open('GET', 'https://api.cryptonator.com/api/ticker/btc-usd');
+req.send('');
+
+echo('fetch');
+
+fetch('https://api.cryptonator.com/api/ticker/btc-usd')
+  .then(res => {
+    console.log("Response, waiting to parse...", res)
+    return res.json()
+  })
+  .then(data => {
+    console.log("Data parsed...")
+    console.log(data.ticker.price)
+  })
+  .catch(e => {
+    console.log("Error: ", e)
+  })
+
+const fetchBitcoinPrice = async () => {
+  try {
+    const res = await fetch('https://api.cryptonator.com/api/ticker/btc-usd');
+    const data = await res.json();
+    console.log(data.ticker.price)
+  } catch (e) {
+    console.log("Error: ", e)
+  }
+}
+fetchBitcoinPrice();
