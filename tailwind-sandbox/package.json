@@ -1,0 +1,20 @@
+{
+  "name": "tailwind_artu",
+  "version": "1.0.1",
+  "description": "",
+  "main": "postcss.config.js",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8.1.4",
+    "postcss-cli": "^8.1.0",
+    "tailwindcss": "^1.9.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "postcss app/css/main.css -o dist/css/main.css --verbose",
+    "watch": "postcss app/css/main.css -wo dist/css/main.css --verbose"
+  },
+  "author": "",
+  "license": "ISC"
+}
