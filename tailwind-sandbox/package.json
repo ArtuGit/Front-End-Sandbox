@@ -1,6 +1,6 @@
 {
-  "name": "tailwind_sandbox",
-  "version": "1.0.0",
+  "name": "tailwind_artu",
+  "version": "1.0.1",
   "description": "",
   "main": "postcss.config.js",
   "dependencies": {
