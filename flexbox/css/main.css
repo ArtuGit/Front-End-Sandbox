@@ -17,6 +17,8 @@ body {
 }
 
 h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
   text-align: center;
   color: #e76f51;
   margin: 0 0 20px 0;
@@ -26,28 +28,38 @@ p {
   margin: 0 0 20px 0;
 }
 
-#logo{
+#header {
+  margin: 0;
+  color: whitesmoke;
+  background: #264653;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mobile-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#logo {
   font-size: 1.5rem;
   font-weight: bold;
   font-style: italic;
 }
 
-#nav {
-  margin: 0;
+#logo a {
+  text-decoration: none;
   color: whitesmoke;
-  background: #264653;
-  padding: 0 20px 0 20px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-
 }
 
 .main-menu {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
+  flex-flow: row nowrap;
+  justify-content: space-around;
   list-style: none;
 }
 
@@ -64,7 +76,13 @@ p {
 }
 
 #hamburger {
+  flex-shrink: 0;
+  flex-grow: 0;
   display: none;
+}
+
+#nav-toggle {
+  all: inherit;
 }
 
 .content {
@@ -212,10 +230,6 @@ div.container-wide {
 }
 
 @media all and (max-width: 900px) {
-  .main-menu {
-    justify-content: space-around;
-  }
-
   .item {
     width: 45%;
   }
@@ -226,19 +240,24 @@ div.container-wide {
 }
 
 @media all and (max-width: 600px) {
-
-  #nav{
-    display: block;
+  #header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
   }
 
-  .main-menu {
-    flex-flow: column wrap;
-    padding: 0;
+  .mobile-header, #nav {
+    min-height: 4rem;
     width: 100%;
-    border: 1px solid gold;
   }
-  .main-menu a {
 
+  ul.main-menu {
+    width: 100%;
+    flex-flow: column wrap;
+  }
+
+  .main-menu a {
     text-align: center;
     font-size: 1.2em;
     padding: 10px;
@@ -248,6 +267,10 @@ div.container-wide {
 
   .main-menu li:last-of-type a {
     border-bottom: none;
+  }
+
+  #hamburger {
+    display: inline-block;
   }
 
   .container {
