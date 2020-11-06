@@ -4,17 +4,29 @@
   <meta charset="UTF-8">
   <title>Flexbox</title>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <link href="css/minireset.css" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-<ul class="navigation">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">About</a></li>
-  <li><a href="#">Products</a></li>
-  <li><a href="#">Services</a>
-  <li><a href="#">Contact</a></li>
-</ul>
+<header id="header">
+  <div class="mobile-header">
+    <div id="logo"><a href="#">Logo</a></div>
+    <div id="hamburger" role="button" tabindex="0">
+      <img alt="" src="images/icon-hamburger.svg">
+    </div>
+  </div>
+
+  <nav class="hidden" id="nav">
+    <ul class="main-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
 <section class="content">
   <h1>Flexbox Demo</h1>
@@ -139,14 +151,7 @@
   </div>
 </footer>
 
-<script>
-  // Not required!
-  // This is just to demo functionality.
-
-  $("#add").on("click", function () {
-    $("<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus adipisci autem commodi eaque earum error facere iste itaque magni maxime minima nobis nulla quam quia quo quod reiciendis sint, totam voluptatem. A, accusantium, ad atque deleniti enim ex iste libero mollitia natus nesciunt nihil quas saepe suscipit, tenetur voluptates.</p>").appendTo(".content");
-  });
-</script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
