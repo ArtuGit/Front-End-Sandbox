@@ -6,7 +6,6 @@
 ## Practices
 - [JS Sandbox](https://artugit.github.io/Front-End-Practices/js-sandbox)
 - [JQuery Sandbox](https://artugit.github.io/Front-End-Practices/js-sandbox/jquery.html)
-- [CSS Flexbox Layout](https://artugit.github.io/Front-End-Practices/flexbox)
 - [CSS Grid Layout](https://artugit.github.io/Front-End-Practices/css-grid)
 - [Some Assignment From Coursera](https://artugit.github.io/Front-End-Practices/course1-mod2-solution)
 - [Bootstrap](https://artugit.github.io/Front-End-Practices/bootstrap)
