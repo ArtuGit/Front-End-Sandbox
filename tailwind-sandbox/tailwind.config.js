@@ -6,15 +6,10 @@ module.exports = {
   purge: [],
   theme: {
     screens: {
-      'xs': '1px',
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
+      'sm': {'min': '1px', 'max': '767px'},
+      'md': {'min': '768px'},
+      'lg': {'min': '1024px'},
+      'xl': {'min': '1280px'},
     },
     extend: {
       colors: {
