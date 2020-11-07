@@ -7,7 +7,29 @@
   <link href="../dist/css/main.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="font-sans leading-normal tracking-normal">
+
+<header class="border h-16 border-red-500 m-0 p-0 bg-cst-dark-lighter fixed w-full flex flex-row flex-nowrap justify-around items-center"
+        id="header">
+  <div class="mobile-header flex flex-row flex-nowrap justify-around">
+    <div id="logo"><a class="font-bold text-cst-light text-3xl px-4" href="#">Logo</a></div>
+    <div class="sm:hidden" id="hamburger" role="button" tabindex="0">
+      <img alt="" src="../assets/images/icon-hamburger.svg">
+    </div>
+  </div>
+
+  <nav class="border border-blue-500 h-full" id="nav">
+    <ul class="main-menu border border-green-500 h-full text-cst-light-darker flex flex-row flex-nowrap justify-evenly items-stretch">
+      <li><a class="main-menu-link active" href="#">Home</a></li>
+      <li><a class="main-menu-link" href="#">About</a></li>
+      <li><a class="main-menu-link" href="#">Products</a></li>
+      <li><a class="main-menu-link" href="#">Services</a></li>
+      <li><a class="main-menu-link" href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
 <script src="js/main.js"></script>
 </body>
 </html>
