@@ -31,18 +31,20 @@
 
   <div class="search-container hidden lg:inline-block">
     <form action="/action_page.php">
-      <input class="px-2" name="search" placeholder="Search..." type="text">
+      <input class="px-2 bg-cst-light" name="search" placeholder="Search..." type="text">
       <button type="submit"><i class="fa fa-search text-cst-light text-xl"></i></button>
     </form>
   </div>
 </header>
 
-<main class="bg-orange-400 sm:bg-blue-500 md:bg-red-400" id="main">
+<main class="flex-grow flex-shrink-0 bg-cst-light">
+
 </main>
 
-<footer class="border flex flex-row flex-wrap justify-around items-center" id="footer">
+<footer class="bg-cst-dark-lighter text-cst-light-darker p-4 gap-6 flex-shrink-0 flex flex-row flex-wrap justify-around items-center"
+        id="footer">
   <div class="item-footer">
-    <ul class="navigation2">
+    <ul class="footer-menu leading-loose">
       <li><a href="#">Menu Item 1</a></li>
       <li><a href="#">Menu Item 2</a></li>
       <li><a href="#">Menu Item 3</a></li>
@@ -60,7 +62,6 @@
     <span>. All rights reserved.</span>
   </div>
 </footer>
-
 <script src="js/main.js"></script>
 </body>
 </html>

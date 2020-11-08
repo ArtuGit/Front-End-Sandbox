@@ -22312,6 +22312,10 @@ video {
           animation: bounce 1s infinite;
 }
 
+html, body {
+  height: 100%;
+}
+
 .main-menu-link {
   font-size: 1.5rem;
   padding-left: 1rem;
@@ -22334,15 +22338,19 @@ video {
   color: rgba(224, 251, 252, var(--text-opacity));
 }
 
-#main {
-}
-
-#footer {
+.footer-menu li:hover {
+  color: #e0fbfc;
 }
 
 @media (min-width: 1px) and (max-width: 767px) {
   .main-menu-link {
-    border-top: 1px solid;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    border-top: 1px solid #e0fbfc;
+  }
+
+  ul.main-menu li:last-child {
+    border-bottom: 1px solid #e0fbfc;
   }
 }
 
