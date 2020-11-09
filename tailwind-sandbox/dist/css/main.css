@@ -22342,6 +22342,29 @@ html, body {
   color: #e0fbfc;
 }
 
+.card1{
+  --bg-opacity: 1;
+  background-color: #ee6c4d;
+  background-color: rgba(238, 108, 77, var(--bg-opacity));
+  width: 20%;
+  padding: 0.75rem;
+  border-radius: 0.125rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #293241;
+}
+
+.card1-title{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.card1-icon{
+  width: 100%;
+  font-size: 2.25rem;
+}
+
 @media (min-width: 1px) and (max-width: 767px) {
   .main-menu-link {
     padding-top: .5rem;
@@ -22351,6 +22374,10 @@ html, body {
 
   ul.main-menu li:last-child {
     border-bottom: 1px solid #e0fbfc;
+  }
+
+  .card1{
+    width: 91.666667%;
   }
 }
 
@@ -109001,3 +109028,4 @@ html, body {
             animation: bounce 1s infinite;
   }
 }
+
