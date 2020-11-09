@@ -1,3 +1,5 @@
+/*noinspection ALL*/
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -586,6 +588,8 @@ video {
   height: auto;
 }
 
+/*noinspection ALL*/
+
 .container {
   width: 100%;
 }
@@ -613,6 +617,8 @@ video {
     max-width: 1280px;
   }
 }
+
+/*noinspection ALL*/
 
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
@@ -22338,11 +22344,16 @@ html, body {
   color: rgba(224, 251, 252, var(--text-opacity));
 }
 
+/*noinspection ALL,CssInvalidFunction,CssInvalidFunction*/
+
 .footer-menu li:hover {
+  /*noinspection CssInvalidFunction*/
   color: #e0fbfc;
 }
 
-.card1{
+/*noinspection CssInvalidFunction,CssInvalidFunction*/
+
+.card1 {
   --bg-opacity: 1;
   background-color: #ee6c4d;
   background-color: rgba(238, 108, 77, var(--bg-opacity));
@@ -22353,30 +22364,36 @@ html, body {
   border: 1px solid #293241;
 }
 
-.card1-title{
+.card1-title {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
   font-size: 1.25rem;
   font-weight: 700;
 }
 
-.card1-icon{
+.card1-icon {
   width: 100%;
   font-size: 2.25rem;
 }
 
+/*noinspection ALL*/
+
 @media (min-width: 1px) and (max-width: 767px) {
+  /*noinspection CssInvalidFunction,CssInvalidFunction*/
+
   .main-menu-link {
     padding-top: .5rem;
     padding-bottom: .5rem;
     border-top: 1px solid #e0fbfc;
   }
 
+  /*noinspection CssInvalidFunction,CssInvalidFunction*/
+
   ul.main-menu li:last-child {
     border-bottom: 1px solid #e0fbfc;
   }
 
-  .card1{
+  .card1 {
     width: 91.666667%;
   }
 }
