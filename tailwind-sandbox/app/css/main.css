@@ -1,8 +1,5 @@
-/*noinspection ALL*/
 @tailwind base;
-/*noinspection ALL*/
 @tailwind components;
-/*noinspection ALL*/
 @tailwind utilities;
 
 html, body {
@@ -21,15 +18,13 @@ html, body {
   @apply bg-cst-dark text-cst-light;
 }
 
-/*noinspection ALL,CssInvalidFunction,CssInvalidFunction*/
+
 .footer-menu li:hover {
-  /*noinspection CssInvalidFunction*/
-  color: theme('colors.cst-light.default');
+   color: theme('colors.cst-light.default');
 }
 
-/*noinspection CssInvalidFunction,CssInvalidFunction*/
 .card1 {
-  @apply bg-cst-orange w-1 / 5 p-3 rounded-sm shadow-sm;
+  @apply bg-cst-orange w-1/5 p-3 rounded-sm shadow-sm;
   border: 1px solid theme('colors.cst-dark.default');
 }
 
@@ -41,22 +36,19 @@ html, body {
   @apply w-full text-4xl;
 }
 
-/*noinspection ALL*/
 @screen sm {
-  /*noinspection CssInvalidFunction,CssInvalidFunction*/
-  .main-menu-link {
+   .main-menu-link {
     padding-top: .5rem;
     padding-bottom: .5rem;
     border-top: 1px solid theme('colors.cst-light.default');
   }
 
-  /*noinspection CssInvalidFunction,CssInvalidFunction*/
   ul.main-menu li:last-child {
     border-bottom: 1px solid theme('colors.cst-light.default');
   }
 
   .card1 {
-    @apply w-11 / 12;
+    @apply w-11/12;
   }
 }
 
