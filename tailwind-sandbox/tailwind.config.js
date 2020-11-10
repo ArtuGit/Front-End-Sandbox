@@ -17,6 +17,9 @@ module.exports = {
       'xl': {'min': '1280px'},
     },
     extend: {
+      fontFamily: {
+        'nunito': ['nunito', 'sans-serif']
+      },
       colors: {
         'cst-dark': {
           lighter: '#3d5a80',
