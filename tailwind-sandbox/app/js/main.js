@@ -19,3 +19,7 @@ function listenKeyboard(event) {
 
 document.getElementById('hamburger').onclick = toggleMobileMenu;
 document.getElementById('hamburger').onkeyup = listenKeyboard;
+
+function dummyHandler() {
+  alert("This is a dummy handler!");
+}
