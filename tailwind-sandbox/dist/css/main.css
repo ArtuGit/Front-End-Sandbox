@@ -23594,7 +23594,6 @@ html, body {
 }
 
 .card2 {
-  width: 25%;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
@@ -23628,8 +23627,8 @@ html, body {
 
 @media (min-width: 1px) and (max-width: 767px) {
   .main-menu-link {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     border-top: 1px solid #e0fbfc;
   }
 
@@ -23637,8 +23636,43 @@ html, body {
     border-bottom: 1px solid #e0fbfc;
   }
 
-  .card1 {
+  .card1, .card2 {
     width: 91.666667%;
+  }
+}
+
+@media (min-width: 768px) {
+  .card2 {
+    width: 40%;
+  }
+
+  .card2:last-child {
+    width: 91.666667%;
+  }
+}
+
+@media (min-width: 1024px){
+  .card2 {
+    width: 20%;
+    --bg-opacity: 1;
+    background-color: #4299e1;
+    background-color: rgba(66, 153, 225, var(--bg-opacity));
+  }
+}
+
+@media (min-width: 1280px) {
+  .card2 {
+    width: 20%;
+    --bg-opacity: 1;
+    background-color: #bee3f8;
+    background-color: rgba(190, 227, 248, var(--bg-opacity));
+  }
+
+  .card2:last-child {
+    width: 20%;
+    --bg-opacity: 1;
+    background-color: #bee3f8;
+    background-color: rgba(190, 227, 248, var(--bg-opacity));
   }
 }
 
@@ -115197,4 +115231,3 @@ html, body {
             animation: bounce 1s infinite;
   }
 }
-

@@ -37,7 +37,7 @@ html, body {
 }
 
 .card2 {
-  @apply w-1/4 shadow-md;
+  @apply shadow-md;
 }
 
 .card2-wrapper {
@@ -63,8 +63,7 @@ html, body {
 
 @screen sm {
   .main-menu-link {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    @apply my-2;
     border-top: 1px solid theme('colors.cst-light.default');
   }
 
@@ -72,8 +71,33 @@ html, body {
     border-bottom: 1px solid theme('colors.cst-light.default');
   }
 
-  .card1 {
+  .card1, .card2 {
     @apply w-11/12;
   }
 }
 
+@screen md {
+  .card2 {
+    @apply w-2/5;
+  }
+
+  .card2:last-child {
+    @apply w-11/12;
+  }
+}
+
+@screen lg{
+  .card2 {
+    @apply w-1/5 bg-blue-500;
+  }
+}
+
+@screen xl {
+  .card2 {
+    @apply w-1/5 bg-blue-200;
+  }
+
+  .card2:last-child {
+    @apply w-1/5 bg-blue-200;
+  }
+}
