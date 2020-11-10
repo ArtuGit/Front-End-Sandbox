@@ -3,7 +3,12 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  purge: [],
+  purge: {
+    mode: 'all',
+    content: [
+      // Paths to your templates here...
+    ],
+  },
   theme: {
     screens: {
       'sm': {'min': '1px', 'max': '767px'},
@@ -26,5 +31,7 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
