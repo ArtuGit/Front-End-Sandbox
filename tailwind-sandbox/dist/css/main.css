@@ -23573,7 +23573,6 @@ html, body {
   --bg-opacity: 1;
   background-color: #ee6c4d;
   background-color: rgba(238, 108, 77, var(--bg-opacity));
-  width: 20%;
   padding: 0.75rem;
   border-radius: 0.125rem;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -23642,7 +23641,7 @@ html, body {
 }
 
 @media (min-width: 768px) {
-  .card2 {
+  .card1, .card2 {
     width: 40%;
   }
 
@@ -23651,28 +23650,17 @@ html, body {
   }
 }
 
-@media (min-width: 1024px){
-  .card2 {
+@media (min-width: 1024px) {
+  .card1 {
     width: 20%;
-    --bg-opacity: 1;
-    background-color: #4299e1;
-    background-color: rgba(66, 153, 225, var(--bg-opacity));
   }
-}
 
-@media (min-width: 1280px) {
   .card2 {
-    width: 20%;
-    --bg-opacity: 1;
-    background-color: #bee3f8;
-    background-color: rgba(190, 227, 248, var(--bg-opacity));
+    width: 25%;
   }
 
   .card2:last-child {
-    width: 20%;
-    --bg-opacity: 1;
-    background-color: #bee3f8;
-    background-color: rgba(190, 227, 248, var(--bg-opacity));
+    width: 25%;
   }
 }
 
