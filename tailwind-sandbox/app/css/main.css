@@ -29,15 +29,40 @@ html, body {
 }
 
 .card1-title {
-  @apply my-3 text-xl font-bold;
+  @apply mt-5 mb-3 text-xl font-bold;
 }
 
 .card1-icon {
-  @apply w-full text-4xl;
+  @apply mt-2 w-full text-4xl;
+}
+
+.card2 {
+  @apply w-1/4 shadow-md;
+}
+
+.card2-wrapper {
+  @apply p-2 pb-3;
+}
+
+.card2-img {
+  @apply block w-full;
+}
+
+.card2-caption, .card2-desc {
+  margin-top: 0.8rem;
+}
+
+.card2-author {
+  @apply text-sm text-gray-600 italic;
+  margin-top: 0.3rem;
+}
+
+.card2-caption {
+  @apply text-xl font-bold;
 }
 
 @screen sm {
-   .main-menu-link {
+  .main-menu-link {
     padding-top: .5rem;
     padding-bottom: .5rem;
     border-top: 1px solid theme('colors.cst-light.default');
