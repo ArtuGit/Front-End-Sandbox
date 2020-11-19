@@ -7,6 +7,10 @@ module.exports = {
     mode: 'all',
     content: [
       // Paths to your templates here...
+      './app/**/*.html',
+      './app/**/*.vue',
+      './src/**/*.css',
+      './src/**/*.js',
     ],
   },
   theme: {
