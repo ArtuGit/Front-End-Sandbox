@@ -145,7 +145,7 @@ const friends4 = friends.map(x => 'Name: ' + x);
 console.log(friends4);
 
 /* --- */
-echo('Objects', "dog")
+echo('Objects: Basic', "dog")
 let dog = {
   name: 'Rena',
   gender: 'bitch',
@@ -156,9 +156,27 @@ let dog = {
 }
 dog.alive = true;
 dog.age = 5;
-console.log(dog)
+console.log(dog);
 dog.toBark();
 
+echo('Objects Proxy', "dog, proxyDog")
+let dogHandler = {
+  get: function(item, property, itemProxy){
+    console.log(`You are getting the value of '${property}' property`)
+    return item[property]
+  },
+  set: function(item, property, value, itemProxy){
+    console.log(`You are setting '${value}' to '${property}' property`);
+    if (property==='name') {
+      value = value + ' of Gem';
+    }
+    item[property] = value;
+  }
+}
+let proxyDog = new Proxy(dog, dogHandler);
+console.log(proxyDog.name); // Rena
+proxyDog.name = 'Lady';
+console.log(proxyDog.name); // Lady of Gem
 /* --- */
 echo('DOM');
 const h1 = document.querySelector('h1');
