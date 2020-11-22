@@ -1,3 +1,25 @@
+/*noinspection CssInvalidAtRule*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  border: 5px solid hotpink;
+}
+
+body {
+  background-color: #2a9d8f;
+}
+
+h1 {
+  @apply bg-blue-300;
+}
+
+div {
+  border: 2px solid darkgreen;
+}
