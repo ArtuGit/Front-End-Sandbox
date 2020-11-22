@@ -31160,17 +31160,34 @@ video {
 
 .animate-pulse {
   -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .animate-bounce {
   -webkit-animation: bounce 1s infinite;
-          animation: bounce 1s infinite;
+  animation: bounce 1s infinite;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html, body {
-  height: 100%;
-  border: 5px solid red;
+  height: 100vh;
+  border: 5px solid hotpink;
+}
+
+body {
+  background-color: #2a9d8f;
+}
+
+h1 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(147, 197, 253, var(--tw-bg-opacity));
+}
+
+div {
+  border: 2px solid darkgreen;
 }
 
 @media (min-width: 640px) {
