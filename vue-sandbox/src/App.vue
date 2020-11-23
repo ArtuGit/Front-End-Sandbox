@@ -8,13 +8,13 @@
       </div>
       <div>
         <task
-            v-for="task in tasks"
-            :key="task.id"
-            :p-done="task.done"
-            :p-id="task.id"
-            :p-name="task.name"
-            @delete="deleteTask"
-            @toggle-done="toggleDone"
+          v-for="task in tasks"
+          :key="task.id"
+          :p-done="task.done"
+          :p-id="task.id"
+          :p-name="task.name"
+          @delete="deleteTask"
+          @toggle-done="toggleDone"
         >
         </task>
       </div>
