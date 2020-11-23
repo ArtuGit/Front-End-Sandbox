@@ -16,7 +16,7 @@ html, body {
 }
 
 .done:hover {
-  @apply hover: bg-green-600
+  @apply bg-green-600;
 }
 
 .not-done {
@@ -24,5 +24,5 @@ html, body {
 }
 
 .not-done:hover {
-  @apply hover: bg-gray-500
+  @apply bg-gray-500;
 }
