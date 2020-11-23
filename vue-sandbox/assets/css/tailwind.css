@@ -8,18 +8,13 @@
 }
 
 html, body {
-  height: 100vh;
-  border: 5px solid hotpink;
+  min-height: 99vh;
 }
 
-body {
-  background-color: #2a9d8f;
+.done {
+  @apply text-green-600 border-green-600 hover: bg-green-600;
 }
 
-h1 {
-  @apply bg-blue-300;
-}
-
-div {
-  border: 2px solid darkgreen;
+.not-done {
+  @apply text-gray-500 border-gray-500 hover: bg-gray-500 w-32;
 }

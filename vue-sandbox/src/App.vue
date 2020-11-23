@@ -1,13 +1,15 @@
 <template>
   <!-- component -->
-  <div class="border-4 h-screen w-full flex flex-col items-center justify-center bg-teal-lightest font-sans">
-    <div class="bg-white rounded shadow p-6 m-4 w-full lg:w-3/4 lg:max-w-lg">
+  <div class="flex items-center justify-center">
+    <div class="bg-white rounded shadow-xl p-6">
       <div class="mb-4">
         <h1 class="text-3xl text-gray-700">Todo List</h1>
         <div class="flex my-8">
           <input class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker"
                  placeholder="Add Todo">
-          <button class="flex-no-shrink p-2 border-2 rounded text-teal border-teal hover:text-white hover:bg-teal">Add
+          <button
+              class="flex-no-shrink flex-grow w-20 p-2 border-2 rounded text-green-600 border-green-600 hover:text-white hover:bg-green-600">
+            Add
           </button>
         </div>
       </div>
@@ -15,20 +17,22 @@
         <div class="flex mb-4 items-center">
           <p class="w-full text-grey-darkest">Add another component to Tailwind Components</p>
           <button
-              class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded hover:text-white text-green border-green hover:bg-green">
+              class="text-sm flex-no-shrink p-2 ml-4 mr-2 border-2 rounded shadow hover:text-white done">
             Done
           </button>
-          <button class="flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:text-white hover:bg-red">
+          <button
+              class="text-sm flex-no-shrink p-2 ml-2 border-2 rounded shadow text-red-600 border-red-600 hover:text-white hover:bg-red-600">
             Remove
           </button>
         </div>
         <div class="flex mb-4 items-center">
           <p class="w-full line-through text-green">Submit Todo App Component to Tailwind Components</p>
           <button
-              class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded hover:text-white text-grey border-grey hover:bg-grey">
+              class="text-sm flex-no-shrink flex-grow p-2 ml-4 mr-2 border-2 rounded shadow hover:text-white not-done">
             Not Done
           </button>
-          <button class="flex-no-shrink p-2 ml-2 border-2 rounded text-red border-red hover:text-white hover:bg-red">
+          <button
+              class="text-sm flex-no-shrink p-2 ml-2 border-2 rounded shadow text-red-600 border-red-600 hover:text-white hover:bg-red-600">
             Remove
           </button>
         </div>
