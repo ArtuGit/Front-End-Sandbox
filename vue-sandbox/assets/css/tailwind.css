@@ -12,9 +12,17 @@ html, body {
 }
 
 .done {
-  @apply text-green-600 border-green-600 hover: bg-green-600;
+  @apply text-green-600 border-green-600;
+}
+
+.done:hover {
+  @apply hover: bg-green-600
 }
 
 .not-done {
-  @apply text-gray-500 border-gray-500 hover: bg-gray-500 w-32;
+  @apply text-gray-500 border-gray-500 w-32;
+}
+
+.not-done:hover {
+  @apply hover: bg-gray-500
 }

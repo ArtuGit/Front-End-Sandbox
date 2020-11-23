@@ -1,7 +1,7 @@
 <template>
   <!-- component -->
   <div class="flex items-center justify-center">
-    <div class="bg-white rounded shadow-xl p-6">
+    <div class="bg-white border rounded shadow-xl p-6">
       <div class="mb-4">
         <h1 class="text-3xl text-gray-700">Todo List</h1>
         <div class="flex my-8">
