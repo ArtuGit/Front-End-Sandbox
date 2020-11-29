@@ -1,10 +1,10 @@
 <template>
-  This is a route component.
+  Router
 </template>
 
 <script>
 export default {
-  name: "route"
+  name: "Router"
 };
 </script>
 

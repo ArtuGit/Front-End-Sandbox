@@ -6,26 +6,29 @@ import App from "./App.vue";
 
 import "../assets/css/tailwind.css";
 
-import DemoComponent from "./components/aux/DemoComponent";
-import RouteComponent from "./components/aux/Route";
+import Home from "./components/pages/Home";
+import Vuex from "./components/pages/Vuex";
+import Router from "./components/pages/Router";
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: [{ path: "/route", component: RouteComponent }]
+  routes: [
+    { path: "/", component: Home },
+    { path: "/router", component: Router },
+    { path: "/vuex", component: Vuex }
+  ]
 });
+// We do not add components that are routers already
 
 const store = createStore({
   state() {
     return {
-      counter: 0
+      counter: 7
     };
   }
 });
 
 const app = createApp(App);
-
-app.component("demo-component", DemoComponent);
-app.component("route", RouteComponent);
 
 app.use(router);
 app.use(store);
