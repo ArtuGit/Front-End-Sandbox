@@ -1,0 +1,16 @@
+/*noinspection CssInvalidAtRule*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  @apply bg-indigo-800 border-8;
+}

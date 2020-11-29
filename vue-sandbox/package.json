@@ -1,0 +1,32 @@
+{
+  "name": "vue-sandbox",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "t-build": "postcss assets/css/tailwind.css -o dist/css/main.css --verbose",
+    "t-watch": "postcss assets/css/tailwind.css -wo dist/css/main.css --verbose"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "core-js": "^3.7.0",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
+    "vue": "^3.0.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.9",
+    "@vue/cli-plugin-eslint": "^4.5.9",
+    "@vue/cli-service": "^4.5.9",
+    "@vue/compiler-sfc": "^3.0.2",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^7.1.0",
+    "postcss-cli": "^8.3.0",
+    "prettier": "^1.19.1"
+  }
+}
