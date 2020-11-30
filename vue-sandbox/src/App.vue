@@ -1,12 +1,12 @@
 <template>
-  <main>
+  <div>
     <main-menu :menu="menu"></main-menu>
     <before-content
       v-if="currentPageTitle"
       :title="currentPageTitle"
     ></before-content>
-    <router-view></router-view>
-  </main>
+    <router-view class="m-5"></router-view>
+  </div>
 </template>
 
 <script>
@@ -49,4 +49,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.m-name {
+  @apply text-red-500 italic;
+}
+
+.c-link {
+  @apply text-blue-600 hover:underline;
+}
+</style>

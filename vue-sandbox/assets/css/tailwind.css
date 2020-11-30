@@ -10,7 +10,3 @@
 html, body {
   min-height: 100vh;
 }
-
-body {
-  @apply bg-indigo-800 border-8;
-}
