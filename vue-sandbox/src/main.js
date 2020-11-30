@@ -14,9 +14,19 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: "/", component: Home },
-    { path: "/router", component: Router },
-    { path: "/router/:num", component: Router, props: true },
-    { path: "/vuex", component: Vuex }
+    {
+      path: "/router",
+      component: Router,
+      alias: "/alias",
+      children: [
+        { path: ":num", component: Router },
+        { path: "delete/:numDelete", component: Router }
+      ],
+      props: true
+    },
+    { path: "/redirect", redirect: "/" },
+    { path: "/vuex", component: Vuex },
+    { path: "/:notFound(.*)", redirect: "/" }
   ]
 });
 // We do not add components that are routers already
