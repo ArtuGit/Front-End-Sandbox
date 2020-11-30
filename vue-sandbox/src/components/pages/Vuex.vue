@@ -1,5 +1,4 @@
 <template>
-  <h2>Vuex</h2>
   <p>Store Counter: {{ $store.state.counter }}</p>
 </template>
 

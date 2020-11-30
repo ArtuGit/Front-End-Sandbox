@@ -15,6 +15,7 @@ const router = createRouter({
   routes: [
     { path: "/", component: Home },
     { path: "/router", component: Router },
+    { path: "/router/:numId", component: Router },
     { path: "/vuex", component: Vuex }
   ]
 });

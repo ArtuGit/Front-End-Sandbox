@@ -10,13 +10,16 @@ export default {
   props: {
     name: String,
     path: String
-  },
-  linkActiveClass: "active"
+  }
 };
 </script>
 
 <style scoped>
 .router-link-active {
   @apply bg-blue-500;
+}
+
+.router-link-exact-active {
+  @apply bg-blue-600;
 }
 </style>

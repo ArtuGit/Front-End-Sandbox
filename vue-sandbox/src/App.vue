@@ -1,17 +1,50 @@
 <template>
   <main>
-    <main-menu></main-menu>
-    <h1 class="text-blue-700 text-center text-3xl">Vue Tailwind Boilerplate</h1>
+    <main-menu :menu="menu"></main-menu>
+    <before-content
+      v-if="currentPageTitle"
+      :title="currentPageTitle"
+    ></before-content>
     <router-view></router-view>
   </main>
 </template>
 
 <script>
 import MainMenu from "./components/UI/MainMenu";
+import BeforeContent from "./components/UI/BeforeContent";
 
 export default {
   components: {
-    MainMenu
+    MainMenu,
+    BeforeContent
+  },
+  data() {
+    return {
+      menu: [
+        { id: 1, name: "Home", path: "/", title: "Vue Sandbox" },
+        { id: 2, name: "Router", path: "/router" },
+        { id: 3, name: "Vuex", path: "/vuex" }
+      ]
+    };
+  },
+  computed: {
+    currentRoutePath: function() {
+      return this.$route.path;
+    },
+    currentMenu: function() {
+      return this.menu.find(element => element.path === this.currentRoutePath);
+    },
+    currentPageTitle: function() {
+      if (typeof this.currentMenu !== "undefined") {
+        if ("title" in this.currentMenu) {
+          return this.currentMenu.title;
+        } else {
+          return this.currentMenu.name;
+        }
+      } else {
+        return "";
+      }
+    }
   }
 };
 </script>
