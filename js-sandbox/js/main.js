@@ -170,13 +170,124 @@ String.prototype.primer = function () {
 console.log("Hello".primer()) //Hello ABC
 
 /* --- */
+echo('Objects Factory', 'makeColor')
+
+function makeColor(r, g, b) {
+  const color = {};
+  color.r = r;
+  color.g = g;
+  color.b = b;
+  color.rgb = function () {
+    const {r, g, b} = this;
+    return `rgb(${r}, ${g}, ${b})`;
+  };
+  color.hex = function () {
+    const {r, g, b} = this;
+    return (
+      '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
+    );
+  };
+  return color;
+}
+
+const firstColor = makeColor(35, 255, 150);
+firstColor.hex();
+firstColor.rgb();
+
+console.log(typeof makeColor) //function
+console.log(typeof firstColor) //object
+
+/* --- */
+echo('Objects Constructor', "Color")
+
+// This is a Constructor Function...
+function Color(r, g, b) {
+  this.r = r;
+  this.g = g;
+  this.b = b;
+}
+
+//If you call it on its own like a regular function...
+Color(35, 60, 190); //undefined
+//It returns undefined. Seems useless!
+
+// *****************
+// THE NEW OPERATOR!
+// *****************
+
+// 1. Creates a blank, plain JavaScript object;
+// 2. Links (sets the constructor of) this object to another object;
+// 3. Passes the newly created object from Step 1 as the this context;
+// 4. Returns this if the function doesn't return its own object.
+
+Color.prototype.rgb = function () {
+  const {r, g, b} = this;
+  return `rgb(${r}, ${g}, ${b})`;
+};
+
+Color.prototype.hex = function () {
+  const {r, g, b} = this;
+  return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+};
+
+Color.prototype.rgba = function (a = 1.0) {
+  const {r, g, b} = this;
+  return `rgba(${r}, ${g}, ${b}, ${a})`;
+};
+
+const color1 = new Color(40, 255, 60);
+color1.hex();
+const color2 = new Color(0, 0, 0);
+color2.hex();
+
+console.log(typeof Color) //function
+console.log(typeof color1) //object
+
+/* --- */
+echo('Objects Class', "Color2")
+
+class Color2 {
+  constructor(r, g, b, name) {
+    this.r = r;
+    this.g = g;
+    this.b = b;
+    this.name = name;
+  }
+
+  innerRGB() {
+    const {r, g, b} = this;
+    return `${r}, ${g}, ${b}`;
+  }
+
+  rgb() {
+    return `rgb(${this.innerRGB()})`;
+  }
+
+  rgba(a = 1.0) {
+    return `rgba(${this.innerRGB()}, ${a})`;
+  }
+
+  hex() {
+    const {r, g, b} = this;
+    return (
+      '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
+    );
+  }
+}
+
+const red = new Color2(255, 67, 89, 'tomato');
+const white = new Color2(255, 255, 255, 'white');
+console.log(typeof Color2) //function
+console.log(typeof red) //object
+
+/* --- */
 echo('Objects Proxy', "dog, proxyDog")
 let dogHandler = {
-  get: function(item, property, itemProxy){
+  get: function (item, property, itemProxy) {
     console.log(`You are getting the value of '${property}' property`)
     return item[property]
   },
-  set: function(item, property, value, itemProxy){
+  set: function (item, property, value, itemProxy) {
     console.log(`You are setting '${value}' to '${property}' property`);
     if (property==='name') {
       value = value + ' of Gem';
