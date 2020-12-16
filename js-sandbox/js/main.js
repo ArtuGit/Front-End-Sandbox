@@ -159,6 +159,17 @@ dog.age = 5;
 console.log(dog);
 dog.toBark();
 
+/* --- */
+echo('Objects Prototypes')
+console.log(typeof Array.prototype); //object
+console.log(typeof 'hi'.__proto__); //object (link)
+
+String.prototype.primer = function () {
+  return (this + ' ABC')
+}
+console.log("Hello".primer()) //Hello ABC
+
+/* --- */
 echo('Objects Proxy', "dog, proxyDog")
 let dogHandler = {
   get: function(item, property, itemProxy){
