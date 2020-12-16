@@ -83,7 +83,7 @@ console.log(funcResult) //func:1
 /* --- */
 echo('Function as var', 'funcDeclare1,funcResult1')
 
-func1 = function funcDeclare1(param) {
+const func1 = function funcDeclare1(param) {
   return 'func:' + param
 }
 
@@ -432,17 +432,18 @@ function GetPerson2(name) {
 }
 
 let person2 = new GetPerson2('Max');
-console.log(person2.name) //> “Max”
+console.log(typeof person2)// object
+console.log(person2.name) // Max
 person2.setName('Oliver');
-console.log(person2.name); //> “Oliver”
-// person2.setNameToFoo(); //> ERROR: foo is undefined
+console.log(person2.name); // Oliver
+// person2.setNameToFoo(); // ERROR: foo is undefined
 
 let foo = 'Foo'
 person2.setNameToFoo()
-console.log(person2.name); //> “Foo”
+console.log(person2.name); // Foo
 
-console.log(person2.secret); //> undefined
-console.log(person2.getSecret()) //> “secret!”
+console.log(person2.secret); // undefined
+console.log(person2.getSecret()) // “secret!”
 
 /* --- */
 echo('Promises', 'fakeRequestPromise,delayedColorChange');
@@ -450,7 +451,7 @@ echo('Promises', 'fakeRequestPromise,delayedColorChange');
 function fakeRequest(url) {
   const delay = Math.floor(Math.random() * 100);
   setTimeout(() => {
-    console.log(`Requesting ${url} ...`);
+    console.log(`Requested ${url} ...`);
   }, delay);
   if (delay > 30)
     return true;
@@ -470,13 +471,15 @@ const fakeRequestPromise = (url) => {
 
 console.log(typeof (fakeRequestPromise)); //function
 
-request0 = fakeRequestPromise('api/callback0')
+const request0 = fakeRequestPromise('api/callback0')
   .catch((err) => {
     console.log("Callback 0 is rejected, an error is catch!");
     console.log(err);
   });
 
-request1 = fakeRequestPromise('api/callback1')
+console.log(typeof (request0)); //object (promise)
+
+const request1 = fakeRequestPromise('api/callback1')
   .then((data) => {
     console.log("Success (callback1)!");
     console.log(data);
@@ -491,6 +494,8 @@ request1 = fakeRequestPromise('api/callback1')
     console.log("Rejected!");
     console.log(err);
   })
+
+console.log(typeof (request1)); //object (promise)
 
 const delayedColorChange = (color, element, delay = 1000) => {
   return new Promise((resolve, reject) => {
