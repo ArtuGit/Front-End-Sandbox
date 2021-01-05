@@ -5,7 +5,9 @@
       v-if="currentPageTitle"
       :title="currentPageTitle"
     ></before-content>
-    <router-view class="m-5"></router-view>
+    <main class="m-5">
+      <router-view></router-view>
+    </main>
   </div>
 </template>
 
@@ -32,7 +34,8 @@ export default {
       return this.$route.path;
     },
     currentMenu: function() {
-      return this.menu.find(element => element.path === this.currentRoutePath);
+      let paramFirst = "/" + this.currentRoutePath.split("/")[1];
+      return this.menu.find(element => element.path === paramFirst);
     },
     currentPageTitle: function() {
       if (typeof this.currentMenu !== "undefined") {
