@@ -204,6 +204,38 @@ console.log(document.getElementsByTagName('h2'))
 console.log(document.querySelector('h2')) // first one from previous previous
 console.log(document.querySelectorAll('h2')) // all
 
+echo('Spread and rest', 'toArray,dogExt,friendsExt');
+dogExt = {
+  ...dog,
+  breed: 'German Shepherd'
+}
+console.log(dogExt)
+
+friendsExt = [
+  'Artu',
+  ...friends,
+]
+console.log(friendsExt)
+
+
+const toArray = (...rest) => {
+  console.log(typeof rest) //object (array)
+  return rest;
+};
+console.log(toArray(1, 2, 3, 4));
+
+echo('Destructing', 'scope1,arrEl1,arrEl2');
+
+function scope1(){ //isolated scope because 'name' is declared above
+  const { name,age } = dog
+  console.log(name,age)
+}
+scope1() // Lady of Gem 5
+
+const [arrEl1,arrEl2] = friends
+console.log(arrEl1,arrEl2) // Emma Liam
+
+
 echo('DOM Manipulation');
 let paragraph = document.querySelector('#first-p');
 // Add/Remove/Change Class
