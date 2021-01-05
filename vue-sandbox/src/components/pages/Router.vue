@@ -25,7 +25,7 @@
 export default {
   name: "Router",
   props: {
-    numDelete: Number
+    numDelete: String
   },
   data() {
     return {
