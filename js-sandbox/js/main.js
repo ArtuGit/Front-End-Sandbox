@@ -50,6 +50,17 @@ console.log(str.indexOf(','))
 console.log(str.substr(0, str.indexOf(',') - 1)) // String constants
 
 /* --- */
+echo('Template literals')
+const tl=`Wow, ${greetingMsg}` //Wow, Hello World!
+console.log(tl)
+console.log(`\`` === '`') // --> true
+console.log(`Multi
+line
+A
+B
+C
+`)
+/* --- */
 echo('Conditions', 'see "Numbers"')
 
 /* --- */
