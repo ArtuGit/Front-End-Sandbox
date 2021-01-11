@@ -50,6 +50,17 @@ console.log(str.indexOf(','))
 console.log(str.substr(0, str.indexOf(',') - 1)) // String constants
 
 /* --- */
+echo('Template literals')
+const tl=`Wow, ${greetingMsg}` //Wow, Hello World!
+console.log(tl)
+console.log(`\`` === '`') // --> true
+console.log(`Multi
+line
+A
+B
+C
+`)
+/* --- */
 echo('Conditions', 'see "Numbers"')
 
 /* --- */
@@ -302,6 +313,38 @@ let proxyDog = new Proxy(dog, dogHandler);
 console.log(proxyDog.name); // Rena
 proxyDog.name = 'Lady';
 console.log(proxyDog.name); // Lady of Gem
+
+echo('Spread and rest', 'toArray,dogExt,friendsExt');
+dogExt = {
+  ...dog,
+  breed: 'German Shepherd'
+}
+console.log(dogExt)
+
+friendsExt = [
+  'Artu',
+  ...friends,
+]
+console.log(friendsExt)
+
+
+const toArray = (...rest) => {
+  console.log(typeof rest) //object (array)
+  return rest;
+};
+console.log(toArray(1, 2, 3, 4));
+
+echo('Destructing', 'scope1,arrEl1,arrEl2');
+
+function scope1(){ //isolated scope because 'name' is declared above
+  const { name,age } = dog
+  console.log(name,age)
+}
+scope1() // Lady of Gem 5
+
+const [arrEl1,arrEl2] = friends
+console.log(arrEl1,arrEl2) // Emma Liam
+
 /* --- */
 echo('DOM');
 const h1 = document.querySelector('h1');
@@ -562,8 +605,6 @@ try {
   console.error(e);
   // expected output: "Parameter is not a number!"
 }
-
-
 
 echo('JSON');
 const sourceJSON = ` 
