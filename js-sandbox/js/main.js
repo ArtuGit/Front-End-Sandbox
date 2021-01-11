@@ -135,10 +135,13 @@ console.log(couple)
 const friends3 = friends.slice(0, 3)
 console.log(friends3)
 
-for (let i = 0; i < friends3.length; i++) { //Method 1. 'while is possible too
+for (let i = 0; i < friends3.length; i++) { //Method 1. 'while' is possible too
   console.log(friends3[i])
 }
-friends3.forEach((item) => console.log(item))
+friends3.forEach((item) => console.log(item)) //Method 2
+for (const item of friends3) { //Method 3
+  console.log(item)
+}  
 
 //Map
 const friends4 = friends.map(x => 'Name: ' + x);
