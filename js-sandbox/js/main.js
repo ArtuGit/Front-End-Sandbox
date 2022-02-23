@@ -519,7 +519,7 @@ console.log(typeof (fakeRequestPromise)); //function
 
 const request0 = fakeRequestPromise('api/callback0')
   .catch((err) => {
-    console.log("Callback 0 is rejected, an error is catch!");
+    console.log("Callback 0 is rejected, an error is caught!");
     console.log(err);
   });
 
