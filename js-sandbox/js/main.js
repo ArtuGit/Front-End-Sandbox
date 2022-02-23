@@ -553,6 +553,7 @@ const delayedColorChange = (color, element, delay = 1000) => {
   })
 }
 
+/* --- */
 echo('async', 'rainbow(),printRainbow()');
 echo('await', 'rainbow(),printRainbow()');
 
@@ -588,6 +589,39 @@ async function makeTwoRequests() {
 }
 
 makeTwoRequests();
+
+/* --- */
+echo('Promise through async function', 'fakeRequestPromise2(),printRainbow()');
+
+const fakeRequestPromise2 = (url) => {
+  return async () => {
+    let result = await fakeRequest(url);
+    if (!result) {
+      console.log(`Connection Timeout for ${url}" :(`);
+      throw Error('Rejecting...');
+    } else {
+      console.log(`Here is your fake data from "${url}".`);
+      return result
+    }
+  }
+}
+
+const funcRes1 = fakeRequestPromise2('api/v2/callback');
+console.log(typeof (funcRes1)); // function
+const res1 = funcRes1(); // this cannot be caught, see below how to catch
+console.log(typeof (res1)); // object (promise)
+console.log(res1);
+
+
+const promiseRes1 = fakeRequestPromise2('api/v2/callback2')()
+promiseRes1.then((data) => {
+  console.log("Success (promiseRes1)!");
+  console.log(data);
+})
+  .catch((err) => {
+    console.log("Rejected (promiseRes1)!");
+    console.log(err);
+  })
 
 echo('try, catch', 'makeTwoRequests()');
 
