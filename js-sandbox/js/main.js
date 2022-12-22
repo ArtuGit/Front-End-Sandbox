@@ -201,12 +201,12 @@ function makeColor(r, g, b) {
       '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
     );
   };
-  return color;
+  return color;0
 }
 
 const firstColor = makeColor(35, 255, 150);
-firstColor.hex();
-firstColor.rgb();
+console.log(firstColor.hex());
+console.log(firstColor.rgb());
 
 console.log(typeof makeColor) //function
 console.log(typeof firstColor) //object
@@ -250,9 +250,9 @@ Color.prototype.rgba = function (a = 1.0) {
 };
 
 const color1 = new Color(40, 255, 60);
-color1.hex();
+console.log(color1.hex());
 const color2 = new Color(0, 0, 0);
-color2.hex();
+console.log(color2.hex());
 
 console.log(typeof Color) //function
 console.log(typeof color1) //object
