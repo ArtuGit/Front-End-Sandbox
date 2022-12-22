@@ -184,6 +184,18 @@ String.prototype.primer = function () {
 console.log("Hello".primer()) //Hello ABC
 
 /* --- */
+echo('Objects Factory')
+const createObj = (name) => ({
+  firstName: name,  
+  makeFullName(lastName) {
+    return this.firstName + ' ' +lastName
+  }
+})
+const factoryObj = createObj('Peter')
+console.log(factoryObj)
+console.log(factoryObj.makeFullName('Robinson'))
+
+/* --- */
 echo('Objects Factory', 'makeColor')
 
 function makeColor(r, g, b) {
@@ -201,7 +213,7 @@ function makeColor(r, g, b) {
       '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)
     );
   };
-  return color;0
+  return color;
 }
 
 const firstColor = makeColor(35, 255, 150);
