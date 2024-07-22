@@ -4,3 +4,4 @@
 - [Some Assignment From Coursera](https://artugit.github.io/Front-End-Sandbox/course1-mod2-solution)
 - [Bootstrap Sandbox](https://artugit.github.io/Front-End-Sandbox/bootstrap-sandbox)
 - [Tailwind Sandbox](https://artugit.github.io/Front-End-Sandbox/tailwind-sandbox)
+- [Swagger UI example](https://artugit.github.io/Front-End-Sandbox/swagger-ui)
